@@ -40,4 +40,20 @@
 ---
 
 ## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=rokmc1893&show_icons=true&theme=radical)
+
+### Contributions & Activity
+![Somin's GitHub stats](https://github-readme-stats.vercel.app/api?username=rokmc1893&show_icons=true&count_private=true&theme=radical)
+
+### Top Languages
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=rokmc1893&layout=compact&theme=radical)
+
+### Streak
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=rokmc1893&theme=radical)
+
+### Total Contributions Overview
+| Metric | Count |
+|--------|-------|
+| Total Commits (last year) | ![Commits](https://img.shields.io/badge/-0-blue) |
+| Total PRs | ![PRs](https://img.shields.io/badge/-0-green) |
+| Total Issues | ![Issues](https://img.shields.io/badge/-0-orange) |
+| Contributed to (last year) | ![Contrib](https://img.shields.io/badge/-0-purple) |
