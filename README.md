@@ -7,7 +7,7 @@
 React와 TypeScript를 중심으로 데이터 흐름을 설계하고,<br />
 기획부터 구현·검증·배포까지 제품의 전 과정을 주도합니다.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-18181B?style=flat-square&logo=notion&logoColor=white)](https://app.notion.com/p/c4537394411a83008747015fe918fc7a)
+
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:smin0108@gmail.com)
 
 </div>
