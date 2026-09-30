@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="246" viewBox="0 0 900 246" role="img" aria-labelledby="title desc">
+<title id="title">Somin Yoo — Frontend Developer</title>
+<desc id="desc">A minimal portfolio header with a diagram connecting Data, Clarity and Action.</desc>
+<rect width="900" height="246" rx="14" fill="#0d1117"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif">
+<text x="36" y="42" font-size="11" letter-spacing="2.5" fill="#919ba7">FRONTEND / DATA / EXPERIENCE</text>
+<text x="34" y="100" font-size="42" font-weight="700" letter-spacing="-1.5" fill="#f0f6fc">Somin Yoo<tspan fill="#6ee7c0">.</tspan></text>
+<text x="36" y="132" font-size="15" fill="#919ba7">From complex data to clear experiences.</text>
+<path d="M36 164H864" stroke="#30363d"/>
+<rect x="36" y="184" width="248" height="38" rx="7" fill="#151b23" stroke="#30363d"/><text x="50" y="208" font-size="11" fill="#6ee7c0">01</text><text x="80" y="208" font-size="12" font-weight="600" letter-spacing="1.8" fill="#f0f6fc">DATA</text><rect x="326" y="184" width="248" height="38" rx="7" fill="#151b23" stroke="#30363d"/><text x="340" y="208" font-size="11" fill="#6ee7c0">02</text><text x="370" y="208" font-size="12" font-weight="600" letter-spacing="1.8" fill="#f0f6fc">CLARITY</text><rect x="616" y="184" width="248" height="38" rx="7" fill="#151b23" stroke="#30363d"/><text x="630" y="208" font-size="11" fill="#6ee7c0">03</text><text x="660" y="208" font-size="12" font-weight="600" letter-spacing="1.8" fill="#f0f6fc">ACTION</text>
+<path d="M294 203h22m-5-4 5 4-5 4M584 203h22m-5-4 5 4-5 4" fill="none" stroke="#6ee7c0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#6ee7c0" stroke-width="2" fill="none" stroke-linecap="round"><path d="M740 88v-9m12 17V63m12 40V74m12 14V54m12 42V68m12 37V80"/><path d="M820 87l10 10 19-24"/></g>
+</g></svg>
