@@ -7,7 +7,9 @@
 
 ```text
 README.md
-assets/f1-racing.svg
+assets/ferrari-sf24.jpg
+assets/CREDITS.md
+assets/f1-racing.svg (이전 일러스트 헤더 보관)
 .github/workflows/profile.yml
 docs/SETUP.md
 scripts/update-cards.py
@@ -248,7 +250,7 @@ Secret 추가 시 통계 카드는 공개 API 대신 Stats Action으로 생성�
 - **잔디 누락**: 커밋 이메일이 계정에 연결됐는지, 기본 브랜치에 반영됐는지 확인합니다. GitHub 자체 집계에 최대 24시간이 걸릴 수 있습니다.
 - **자동 실행 중단**: 공개 저장소의 예약 워크플로우는 60일간 활동이 없으면 비활성화될 수 있습니다. Actions에서 다시 활성화합니다.
 - **폰·좁은 화면**: 통계 이미지는 각각 49% 너비입니다. 큰 화면에서는 나란히 보이고, 좁은 화면에서 글자가 작다면 너비를 100%로 변경해 세로 배치하세요.
-- **애니메이션**: 헤더는 스크립트 없는 SVG CSS 애니메이션입니다. 동작 줄이기 설정을 쓰는 브라우저에서는 헤더 애니메이션이 정지합니다.
+- **헤더 사진**: 실제 페라리 SF-24 주행 사진을 사용합니다. 촬영자 Lukas Raich, 크롭 Mb2437, CC BY-SA 4.0이며 사진 아래 출처·라이선스를 표시했습니다. 사진 파일은 Commons에서 공개한 크롭 버전을 추가 수정 없이 저장했습니다. 자세한 출처는 `assets/CREDITS.md`에 있습니다. 아래 타이핑 SVG는 애니메이션으로 유지합니다.
 
 ## 사용한 프로젝트와 공식 문서
 

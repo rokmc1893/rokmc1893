@@ -1,6 +1,11 @@
 <div align="center">
 
-<img src="./assets/f1-racing.svg" alt="유소민의 Engineering Garage — 질주하는 F1 스타일 레이싱 자동차" width="100%">
+<h2>SOMIN YOO · ENGINEERING GARAGE</h2>
+<p><strong>SPEED / PRECISION / TEAMWORK</strong></p>
+
+<img src="./assets/ferrari-sf24.jpg" alt="2024 오스트리아 그랑프리에서 주행하는 샤를 르클레르의 실제 페라리 SF-24" width="100%">
+
+<sub>Photo: <a href="https://commons.wikimedia.org/wiki/User:Lukas_Raich">Lukas Raich</a> · <a href="https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2024_Nr._16_Leclerc_(side)_(cropped).jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · Crop: Mb2437</sub>
 
 <a href="https://github.com/DenverCoder1/readme-typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=21&amp;duration=3600&amp;pause=1400&amp;color=FF3535&amp;center=true&amp;vCenter=true&amp;width=1000&amp;height=55&amp;lines=Hi%2C+I%27m+Somin.+I+love+Speed+%26+Optimization.;Build+with+purpose.+Tune+with+precision.;Great+software%2C+like+racing%2C+is+a+team+sport." alt="Hi, I'm Somin. I love Speed and Optimization. Build with purpose. Tune with precision. Great software is a team sport." width="100%">
