@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/profile.yml"
+      - "scripts/update-cards.py"
 
 permissions:
   contents: write
@@ -21,6 +22,8 @@ jobs:
     name: Generate 3D grass and racing telemetry
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      HAS_PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN != '' }}
     steps:
       - name: Checkout profile
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
@@ -32,6 +35,7 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
 
       - name: Render stats.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
@@ -42,6 +46,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render top-langs.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
@@ -52,6 +57,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render pin-healthcare.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: pin
@@ -62,6 +68,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render pin-legal.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: pin
@@ -72,6 +79,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render pin-policy.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: pin
@@ -80,6 +88,12 @@ jobs:
           token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
           core_version: "2.1.3"
           fail_on_error: "true"
+
+      - name: Fetch public telemetry without a PAT
+        if: env.HAS_PROFILE_TOKEN != 'true'
+        env:
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        run: python3 scripts/update-cards.py
 
       - name: Validate generated assets
         run: |

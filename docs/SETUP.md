@@ -10,6 +10,7 @@ README.md
 assets/f1-racing.svg
 .github/workflows/profile.yml
 docs/SETUP.md
+scripts/update-cards.py
 profile-3d-contrib/
   profile-green.svg
   profile-night-green.svg
@@ -40,6 +41,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/profile.yml"
+      - "scripts/update-cards.py"
 
 permissions:
   contents: write
@@ -53,6 +55,8 @@ jobs:
     name: Generate 3D grass and racing telemetry
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      HAS_PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN != '' }}
     steps:
       - name: Checkout profile
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
@@ -64,6 +68,7 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
 
       - name: Render stats.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
@@ -74,6 +79,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render top-langs.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: top-langs
@@ -84,6 +90,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render pin-healthcare.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: pin
@@ -94,6 +101,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render pin-legal.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: pin
@@ -104,6 +112,7 @@ jobs:
           fail_on_error: "true"
 
       - name: Render pin-policy.svg
+        if: env.HAS_PROFILE_TOKEN == 'true'
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: pin
@@ -112,6 +121,12 @@ jobs:
           token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
           core_version: "2.1.3"
           fail_on_error: "true"
+
+      - name: Fetch public telemetry without a PAT
+        if: env.HAS_PROFILE_TOKEN != 'true'
+        env:
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        run: python3 scripts/update-cards.py
 
       - name: Validate generated assets
         run: |
@@ -149,14 +164,19 @@ jobs:
 액션이 생성하는 여러 변형 중 README에서 쓰는 두 파일만 저장합니다.
 
 통계·언어·핀 카드는 원본 `anuraghazra/github-readme-stats`가 안내하는 후속
-`stats-organization/github-readme-stats-action`으로 생성합니다.
+`stats-organization/github-stats-extended`의 공개 API로 받아 저장합니다.
+PAT를 설정하면 `stats-organization/github-readme-stats-action`의 직접 생성 방식으로 자동 전환됩니다.
+기본 GitHub 토큰은 다른 저장소의 통계 조회에 제한이 있어 카드에는 공개 API를 사용합니다.
 `radical`을 기반으로 배경·제목·아이콘 색을 카본 블랙·레드에 맞췄습니다.
-카드는 저장소 자체에서 제공되므로 공개 통계 API 서버의 이미지 응답에 의존하지 않습니다.
+카드는 저장소 자체에서 제공됩니다. 매일 갱신할 때는 공개 API에 의존하지만, 페이지를 볼 때는 마지막 정상 이미지를 사용합니다.
+`scripts/update-cards.py`가 오류 카드를 검사하고 재시도합니다. 갱신 실패 시 이전 커밋의 정상 이미지가 유지됩니다.
+
+공개 카드 다운로드 스크립트의 전체 코드는 [scripts/update-cards.py](../scripts/update-cards.py)에 있습니다.
 
 ## 3. 기본 Token 설정: 발급할 필요 없음
 
 현재 설정은 GitHub가 실행마다 자동 제공하는 `secrets.GITHUB_TOKEN`을 사용합니다.
-계정의 공개 기여·저장소 정보가 기본 대상입니다. 별도 토큰을 복사하거나 Secrets를 만들 필요가 없습니다.
+3D 잔디는 기본 토큰으로, 통계 카드는 공개 API로 계정의 공개 데이터를 조회합니다. 별도 토큰을 복사하거나 Secrets를 만들 필요가 없습니다.
 워크플로우의 `permissions: contents: write`는 생성된 이미지를 이 프로필 저장소에 커밋하는 데 사용됩니다.
 
 첫 실행 또는 수동 갱신:
@@ -195,7 +215,8 @@ gh run list --repo rokmc1893/rokmc1893 --workflow profile.yml --limit 5
 9. **Run workflow**를 다시 실행합니다.
 10. 토큰이 만료되면 새 토큰으로 같은 Secret 값을 교체합니다.
 
-워크플로우는 `secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN`을 사용하므로 Secret 추가 후 YAML 수정이 필요 없습니다.
+3D 액션에는 `secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN`을 사용합니다.
+Secret 추가 시 통계 카드는 공개 API 대신 Stats Action으로 생성하므로 YAML 수정이 필요 없습니다.
 이미지 커밋은 checkout의 기본 GitHub 토큰으로 수행합니다.
 비공개 통계 표시를 켜면 생성된 이미지가 공개 프로필에 저장되므로 공개할 범위를 먼저 정하세요.
 최소 범위로 접근 가능한 fine-grained PAT는 GitHub가 권장하지만, 다중 조직·외부 협업 저장소 접근에는 제한이 있으며 이 통계 액션의 안내와 실제 쿼리 권한을 함께 확인해야 합니다.
@@ -223,7 +244,7 @@ gh run list --repo rokmc1893/rokmc1893 --workflow profile.yml --limit 5
 ## 6. 오류 확인
 
 - **403 / push 실패**: 실행 로그와 저장소 Actions 정책·브랜치 보호를 확인합니다. `contents: write`가 허용돼야 합니다. 보호 규칙이 있으면 생성 파일을 PR로 반영하는 방식으로 조정합니다.
-- **API 제한·통계 조회 실패**: 이전 이미지가 유지되도록 `fail_on_error: true`로 설정했습니다. 잠시 후 수동 실행하고 필요할 때 PAT 사용을 검토합니다.
+- **API 제한·통계 조회 실패**: 공개 카드 스크립트는 오류 카드 저장을 막고, PAT 실행은 `fail_on_error: true`로 설정했습니다. 잠시 후 수동 실행하고 필요할 때 PAT 사용을 검토합니다.
 - **잔디 누락**: 커밋 이메일이 계정에 연결됐는지, 기본 브랜치에 반영됐는지 확인합니다. GitHub 자체 집계에 최대 24시간이 걸릴 수 있습니다.
 - **자동 실행 중단**: 공개 저장소의 예약 워크플로우는 60일간 활동이 없으면 비활성화될 수 있습니다. Actions에서 다시 활성화합니다.
 - **폰·좁은 화면**: 통계 이미지는 각각 49% 너비입니다. 큰 화면에서는 나란히 보이고, 좁은 화면에서 글자가 작다면 너비를 100%로 변경해 세로 배치하세요.
