@@ -68,7 +68,6 @@
         <path d="M894 256h73v10h-73" fill="#f2f4f7"/><path d="M952 249h12v23h-12" fill="#ff3535"/>
         <path d="M823 244 872 235" stroke="#29323f" stroke-width="4"/>
         <text x="598" y="242" font-family="Arial,sans-serif" font-size="17" font-weight="800" font-style="italic" fill="#fff">01</text>
-        <text x="725" y="245" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1.4" fill="#fff">BUILD · TUNE · SHIP</text>
       </g>
       <g><circle cx="509" cy="246" r="32" fill="#07090c"/><circle cx="509" cy="246" r="29" fill="none" stroke="#343944" stroke-width="2"/><circle cx="509" cy="246" r="25" fill="none" stroke="#ffce52" stroke-width="1.5"/><circle cx="509" cy="246" r="17" fill="#181f29"/><g class="wheel" stroke="#84909e" stroke-width="3"><path d="M494 246h30m-15-15v30m-10.6-25.6 21.2 21.2m0-21.2-21.2 21.2"/></g><circle cx="509" cy="246" r="5" fill="#f2f4f7"/></g>
       <g><circle cx="866" cy="246" r="32" fill="#07090c"/><circle cx="866" cy="246" r="29" fill="none" stroke="#343944" stroke-width="2"/><circle cx="866" cy="246" r="25" fill="none" stroke="#ffce52" stroke-width="1.5"/><circle cx="866" cy="246" r="17" fill="#181f29"/><g class="wheel" stroke="#84909e" stroke-width="3"><path d="M851 246h30m-15-15v30m-10.6-25.6 21.2 21.2m0-21.2-21.2 21.2"/></g><circle cx="866" cy="246" r="5" fill="#f2f4f7"/></g>
