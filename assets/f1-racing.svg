@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">Somin Yoo — Engineering at race pace</title>
+  <desc id="desc">A red open-wheel racing car accelerates through a dark circuit. Build with purpose. Tune with precision. Ship as a team.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171c26"/><stop offset="1" stop-color="#080b10"/></linearGradient>
+    <linearGradient id="body" x2="0.8" y2="1"><stop stop-color="#ff5b57"/><stop offset=".5" stop-color="#ed292f"/><stop offset="1" stop-color="#990b22"/></linearGradient>
+    <linearGradient id="fade"><stop stop-color="#ff3535" stop-opacity="0"/><stop offset="1" stop-color="#ff3535" stop-opacity=".45"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#ff3232" stop-opacity=".2"/><stop offset="1" stop-color="#ff3232" stop-opacity="0"/></radialGradient>
+    <pattern id="carbon" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 16 16 0M-8 8 8-8M8 24 24 8" stroke="#fff" stroke-opacity=".025" stroke-width="4"/></pattern>
+    <pattern id="checker" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#eee"/><rect x="8" y="8" width="8" height="8" fill="#eee"/></pattern>
+    <clipPath id="clip"><rect width="1200" height="380" rx="20"/></clipPath>
+  </defs>
+  <style>
+    .track{animation:track 1s linear infinite}.streak{animation:track .65s linear infinite}
+    .car{animation:drive 4s ease-in-out infinite}.chassis{animation:chassis .15s ease-in-out infinite alternate}
+    .wheel{transform-box:fill-box;transform-origin:center;animation:spin .4s linear infinite}
+    .lights{animation:pulse 2s ease-in-out infinite}
+    @keyframes track{to{transform:translateX(-180px)}}
+    @keyframes drive{0%,100%{transform:translateX(-10px)}50%{transform:translateX(22px)}}
+    @keyframes chassis{to{transform:translateY(-.6px)}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes pulse{50%{opacity:.45}}
+    @media(prefers-reduced-motion:reduce){.track,.streak,.car,.chassis,.wheel,.lights{animation:none}}
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="380" fill="url(#bg)"/>
+    <rect width="1200" height="380" fill="url(#carbon)"/>
+    <ellipse cx="800" cy="210" rx="460" ry="190" fill="url(#glow)"/>
+    <path d="M0 0h8v380H0" fill="#ff3535"/>
+    <g font-family="Arial,Helvetica,sans-serif">
+      <text x="44" y="42" fill="#8e98a9" font-size="12" letter-spacing="3">ROKMC1893 / ENGINEERING GARAGE</text>
+      <text x="42" y="100" fill="#f5f7fa" font-size="52" font-weight="800" letter-spacing="-2">SOMIN YOO<tspan fill="#ff3535">.</tspan></text>
+      <text x="45" y="131" fill="#a9b2c1" font-size="14" letter-spacing="1.5">FRONTEND DEVELOPER • BUILT FOR CLARITY</text>
+      <rect x="1095" y="31" width="60" height="26" fill="url(#checker)" opacity=".8"/>
+      <g class="lights" fill="#ff3535"><circle cx="990" cy="44" r="4"/><circle cx="1007" cy="44" r="4"/><circle cx="1024" cy="44" r="4"/><circle cx="1041" cy="44" r="4"/><circle cx="1058" cy="44" r="4"/></g>
+    </g>
+    <path d="M0 277h1200v29H0" fill="#111722"/>
+    <path d="M0 278h1200" stroke="#444b59"/>
+    <g class="track" fill="#d9e0eb" opacity=".28">
+      <rect x="0" y="292" width="80" height="2"/>
+      <rect x="180" y="292" width="80" height="2"/>
+      <rect x="360" y="292" width="80" height="2"/>
+      <rect x="540" y="292" width="80" height="2"/>
+      <rect x="720" y="292" width="80" height="2"/>
+      <rect x="900" y="292" width="80" height="2"/>
+      <rect x="1080" y="292" width="80" height="2"/>
+      <rect x="1260" y="292" width="80" height="2"/>
+      <rect x="1440" y="292" width="80" height="2"/>
+    </g>
+    <g class="streak" stroke="url(#fade)" stroke-width="2">
+      <path d="M-20 187h280m40 28h180m500-24h360M10 245h300m580-12h330"/>
+    </g>
+    <g class="car">
+      <ellipse cx="682" cy="272" rx="296" ry="9" fill="#000" opacity=".6"/>
+      <g class="chassis">
+        <path d="M459 226 428 186h34l35 40" fill="#9a1022"/>
+        <path d="M421 179h67v13h-67z" fill="#f0383f"/><path d="M419 179h72v4h-72" fill="#f6f7fa"/>
+        <path d="M447 247h88l35-35 72-15 25-28h51l38 39 53 16 123 12 31 19H449Z" fill="url(#body)"/>
+        <path d="M551 236 648 225l47-14 58 4 148 29-173 12-184-1Z" fill="#c6162c"/>
+        <path d="M572 215 643 203l23-27h43l21 25h-43l-27 17Z" fill="#ff6d67"/>
+        <path d="M649 203h52l30 17h-60Z" fill="#0a0d13"/>
+        <path d="M659 194q20-22 55-1l19 20" fill="none" stroke="#eef2f7" stroke-width="5"/>
+        <path d="M701 186h18v24h-8Z" fill="#a4acb8"/>
+        <ellipse cx="699" cy="195" rx="11" ry="9" fill="#e6edf4"/><path d="M690 195h17" stroke="#252a33" stroke-width="4"/>
+        <path d="M546 247h175l37-11 111 14" fill="none" stroke="#f7f7f9" stroke-width="5"/>
+        <path d="M448 256h454v8H448" fill="#1d2430"/>
+        <path d="M879 239h39v16h-39" fill="#ed292f"/>
+        <path d="M894 256h73v10h-73" fill="#f2f4f7"/><path d="M952 249h12v23h-12" fill="#ff3535"/>
+        <path d="M823 244 872 235" stroke="#29323f" stroke-width="4"/>
+        <text x="598" y="242" font-family="Arial,sans-serif" font-size="17" font-weight="800" font-style="italic" fill="#fff">01</text>
+        <text x="725" y="245" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1.4" fill="#fff">BUILD · TUNE · SHIP</text>
+      </g>
+      <g><circle cx="509" cy="246" r="32" fill="#07090c"/><circle cx="509" cy="246" r="29" fill="none" stroke="#343944" stroke-width="2"/><circle cx="509" cy="246" r="25" fill="none" stroke="#ffce52" stroke-width="1.5"/><circle cx="509" cy="246" r="17" fill="#181f29"/><g class="wheel" stroke="#84909e" stroke-width="3"><path d="M494 246h30m-15-15v30m-10.6-25.6 21.2 21.2m0-21.2-21.2 21.2"/></g><circle cx="509" cy="246" r="5" fill="#f2f4f7"/></g>
+      <g><circle cx="866" cy="246" r="32" fill="#07090c"/><circle cx="866" cy="246" r="29" fill="none" stroke="#343944" stroke-width="2"/><circle cx="866" cy="246" r="25" fill="none" stroke="#ffce52" stroke-width="1.5"/><circle cx="866" cy="246" r="17" fill="#181f29"/><g class="wheel" stroke="#84909e" stroke-width="3"><path d="M851 246h30m-15-15v30m-10.6-25.6 21.2 21.2m0-21.2-21.2 21.2"/></g><circle cx="866" cy="246" r="5" fill="#f2f4f7"/></g>
+    </g>
+    <g font-family="Arial,Helvetica,sans-serif">
+      <path d="M44 330h1112" stroke="#303846"/>
+      <text x="45" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">01 / SPEED</text>
+      <text x="415" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">02 / PRECISION</text>
+      <text x="860" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">03 / TEAMWORK</text>
+    </g>
+  </g>
+</svg>
