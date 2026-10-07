@@ -1,112 +1,53 @@
 <div align="center">
+  <img src="./assets/f1-racing.svg" alt="소민의 Engineering Garage — F1 레이싱 애니메이션" width="100%">
+</div>
 
-<img src="./assets/f1-racing.svg" alt="유소민의 Engineering Garage — 질주하는 F1 스타일 레이싱 자동차" width="100%">
+> **AI와 데이터를 활용해 직관적이고 매력적인 프론트엔드 경험을 구축하는 개발자 소민입니다.**
 
-<a href="https://github.com/DenverCoder1/readme-typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=21&amp;duration=3600&amp;pause=1400&amp;color=FF3535&amp;center=true&amp;vCenter=true&amp;width=1000&amp;height=55&amp;lines=Hi%2C+I%27m+Somin.+I+love+Speed+%26+Optimization.;Build+with+purpose.+Tune+with+precision.;Great+software%2C+like+racing%2C+is+a+team+sport." alt="Hi, I'm Somin. I love Speed and Optimization. Build with purpose. Tune with precision. Great software is a team sport." width="100%">
-</a>
-
-**데이터와 AI를 사용하기 쉬운 웹·모바일 경험으로 연결합니다.**<br>
-Frontend Developer · React · TypeScript · Web & Mobile
-
+<div align="center">
 <a href="mailto:smin0108@gmail.com"><img alt="Email" src="https://img.shields.io/badge/EMAIL-FF3535?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"></a>
 <a href="https://www.linkedin.com/in/%EC%86%8C%EB%AF%BC-%EC%9C%A0-3231a1360/"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-171C26?style=for-the-badge&amp;logoColor=white"></a>
 <a href="https://github.com/rokmc1893?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/GITHUB-171C26?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
 
-<!-- 블로그 주소를 추가할 때 같은 위치에 for-the-badge 링크를 넣습니다. -->
-
 </div>
-
-## 🏁 About
-
-React·TypeScript로 웹과 모바일 인터페이스를 만듭니다.<br>
-인증·커뮤니티·데이터 시각화부터 AI 결과를 보여주는 화면까지, 사용자 흐름과 API 연동을 함께 설계합니다.
 
 ## 🛠️ Tech Stack
 
-**Frontend & Mobile**
-
-<p>
-<img alt="React" src="https://img.shields.io/badge/React-171C26?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB">
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=for-the-badge&amp;logo=typescript&amp;logoColor=E8EDF5">
-<img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=for-the-badge&amp;logo=nextdotjs&amp;logoColor=E8EDF5">
-<img alt="React Native" src="https://img.shields.io/badge/React%20Native-171C26?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB">
-<img alt="Expo" src="https://img.shields.io/badge/Expo-171C26?style=for-the-badge&amp;logo=expo&amp;logoColor=E8EDF5">
-<img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-171C26?style=for-the-badge&amp;logo=tailwindcss&amp;logoColor=61DAFB">
-</p>
-
-**Backend & Data**
-
-<p>
-<img alt="Python" src="https://img.shields.io/badge/Python-171C26?style=for-the-badge&amp;logo=python&amp;logoColor=E8EDF5">
-<img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=for-the-badge&amp;logo=fastapi&amp;logoColor=4AE0A4">
-<img alt="NestJS" src="https://img.shields.io/badge/NestJS-171C26?style=for-the-badge&amp;logo=nestjs&amp;logoColor=FF3535">
-<img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-171C26?style=for-the-badge&amp;logo=postgresql&amp;logoColor=E8EDF5">
-<img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=for-the-badge&amp;logo=supabase&amp;logoColor=4AE0A4">
-<img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-171C26?style=for-the-badge&amp;logo=neo4j&amp;logoColor=4AE0A4">
-</p>
-
-**AI & Engineering**
-
-<p>
-<img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-171C26?style=for-the-badge&amp;logo=langchain&amp;logoColor=4AE0A4">
-<img alt="Gemini" src="https://img.shields.io/badge/Gemini-171C26?style=for-the-badge&amp;logo=googlegemini&amp;logoColor=E8EDF5">
-<img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=for-the-badge&amp;logo=openai&amp;logoColor=E8EDF5">
-<img alt="Docker" src="https://img.shields.io/badge/Docker-171C26?style=for-the-badge&amp;logo=docker&amp;logoColor=E8EDF5">
-<img alt="Git" src="https://img.shields.io/badge/Git-171C26?style=for-the-badge&amp;logo=git&amp;logoColor=FF3535">
-</p>
-
-<sub>UI & State: Vite · React Query · Zustand · Recharts · Three.js / React Three Fiber<br>AI & Retrieval: Chroma · RAG · Pandas</sub>
+<table>
+<tr><td width="150"><b>Web & Mobile</b></td><td><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"> <img alt="React Native" src="https://img.shields.io/badge/React%20Native-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="Expo" src="https://img.shields.io/badge/Expo-171C26?style=flat-square&amp;logo=expo&amp;logoColor=E8EDF5"> <img alt="Vite" src="https://img.shields.io/badge/Vite-171C26?style=flat-square&amp;logo=vite&amp;logoColor=FF3535"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-171C26?style=flat-square&amp;logo=tailwindcss&amp;logoColor=61DAFB"></td></tr>
+<tr><td width="150"><b>UI & Visualization</b></td><td><img alt="React Query" src="https://img.shields.io/badge/React%20Query-171C26?style=flat-square&amp;logo=tanstack&amp;logoColor=FF3535"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTQgMjBWMTJtOCA4VjRtOCAxNlY4IiBzdHJva2U9IiM2MURBRkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Three.js" src="https://img.shields.io/badge/Three.js-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=E8EDF5"> <img alt="React Three Fiber" src="https://img.shields.io/badge/React%20Three%20Fiber-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=61DAFB"></td></tr>
+<tr><td width="150"><b>Backend & Data</b></td><td><img alt="Python" src="https://img.shields.io/badge/Python-171C26?style=flat-square&amp;logo=python&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="NestJS" src="https://img.shields.io/badge/NestJS-171C26?style=flat-square&amp;logo=nestjs&amp;logoColor=FF3535"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-171C26?style=flat-square&amp;logo=postgresql&amp;logoColor=E8EDF5"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"> <img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-171C26?style=flat-square&amp;logo=neo4j&amp;logoColor=4AE0A4"> <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-171C26?style=flat-square&amp;logo=streamlit&amp;logoColor=FF3535"> <img alt="Redis" src="https://img.shields.io/badge/Redis-171C26?style=flat-square&amp;logo=redis&amp;logoColor=FF3535"> <img alt="Pandas" src="https://img.shields.io/badge/Pandas-171C26?style=flat-square&amp;logo=pandas&amp;logoColor=E8EDF5"></td></tr>
+<tr><td width="150"><b>AI & Agents</b></td><td><img alt="Claude" src="https://img.shields.io/badge/Claude-171C26?style=flat-square&amp;logo=claude&amp;logoColor=D9A181"> <img alt="Codex" src="https://img.shields.io/badge/Codex-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0ibTggNi01IDYgNSA2bTgtMTIgNSA2LTUgNk0xNCA0bC00IDE2IiBmaWxsPSJub25lIiBzdHJva2U9IiNFOEVERjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-171C26?style=flat-square&amp;logo=googlegemini&amp;logoColor=E8EDF5"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"> <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-171C26?style=flat-square&amp;logo=langchain&amp;logoColor=4AE0A4"> <img alt="Chroma" src="https://img.shields.io/badge/Chroma-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iIzRBRTBBNCI%2BPGNpcmNsZSBjeD0iNiIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjE4IiByPSI0Ii8%2BPC9nPjwvc3ZnPg%3D%3D"> <img alt="RAG" src="https://img.shields.io/badge/RAG-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNEFFMEE0IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJtMTQgMTQgNyA3IiBzdHJva2U9IiM0QUUwQTQiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg%3D%3D"></td></tr>
+<tr><td width="150"><b>Tools & Integration</b></td><td><img alt="Git" src="https://img.shields.io/badge/Git-171C26?style=flat-square&amp;logo=git&amp;logoColor=FF3535"> <img alt="Docker" src="https://img.shields.io/badge/Docker-171C26?style=flat-square&amp;logo=docker&amp;logoColor=E8EDF5"> <img alt="Kakao SDK" src="https://img.shields.io/badge/Kakao%20SDK-171C26?style=flat-square&amp;logo=kakao&amp;logoColor=FEE500"></td></tr>
+</table>
 
 ## 🏎️ Selected Projects
 
-### [정책핏 인천 ↗](https://github.com/rokmc1893/INU-X-UOU)
-산업 수요와 정책 사업을 대조해 지원 공백·중복 후보를 찾고 검토서 초안을 만드는 서비스.
-
-**Stack** · Python · Streamlit · Neo4j · OpenAI · Next.js<br>
-**Competition** · [인천대학교–울산대학교 초광역 지역문제 해결형 해커톤](https://rnd.incheon.ac.kr/linc/online/edu_view.do?edu_pbanc_sn=60) · 팀 F4<br>
-**Host** · 인천대학교 · 울산대학교
-<!-- 수상명은 사용자 확인 후 추가 -->
-
-### Ulsainer · 관광 미션 앱
-관광지 탐색·미션·커뮤니티·방문 기록을 연결하는 iOS/Android 앱.
-
-**Stack** · React Native · Expo · TypeScript · Supabase · Kakao SDK<br>
-**Competition** · [2026 관광데이터 활용 공모전](https://api.visitkorea.or.kr/)<br>
-**Host** · 한국관광공사 · <sub>코드 비공개</sub>
-<!-- 수상명은 사용자 확인 후 추가 -->
-
-### [Deepgle Legal ↗](https://github.com/ulsanung-del/legal-screening-assistant)
-계약서를 업로드하면 위험 조항과 근거 법령, 검토 보고서를 제공하는 법무 AI 프로토타입.
-
-**Stack** · React · TypeScript · FastAPI · Gemini · LangGraph · Chroma<br>
-**Competition** · [2026 Google AI Agent Challenge](https://aisw.daegu.ac.kr/article/photo25/detail/222842) 예선 프로젝트<br>
-**Host** · 경북대 · 대구대 · 영남대 · 울산대 · 한동대 SW중심대학
-<!-- 수상명은 사용자 확인 후 추가 -->
-
-### [US Vibe ↗](https://github.com/US-VIBE/us_vibe)
-AI 에이전트와 역할 분담·채팅·산출물 리뷰·회고를 경험하는 협업 학습 시뮬레이터.
-
-**Stack** · Next.js · TypeScript · NestJS · PostgreSQL · Redis · OpenAI<br>
-**Focus** · 워크스페이스 UI · 채팅/API 연동 · 산출물 AI 평가
-
-### [결혼·출산 준비 헬스케어 ↗](https://github.com/rokmc1893/Capstone-Design)
-건강 지표와 검사 결과를 시각화하고, 미션·커뮤니티를 통해 꾸준한 관리를 돕는 모바일 웹.
-
-**Stack** · React · TypeScript · Vite · Zustand · Recharts · Tailwind CSS<br>
-**Focus** · 온보딩 · 로그인/인증 연동 · 미션·검사 리포트 UI
+<table>
+<tr><td colspan="2">
+<h3>🏅 <a href="https://github.com/rokmc1893/INU-X-UOU">정책핏 인천 ↗</a></h3>
+<p><img alt="장려상 수상" src="https://img.shields.io/badge/AWARD-%EC%9E%A5%EB%A0%A4%EC%83%81-B8892D?style=flat-square&amp;labelColor=332A16"> <img alt="Team F4" src="https://img.shields.io/badge/TEAM-F4-171C26?style=flat-square"></p>
+<p>산업 수요와 정책을 대조해 <b>지원 공백·중복 후보</b>와 검토서 초안을 제공합니다.</p>
+<p><img alt="Python" src="https://img.shields.io/badge/Python-171C26?style=flat-square&amp;logo=python&amp;logoColor=E8EDF5"> <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-171C26?style=flat-square&amp;logo=streamlit&amp;logoColor=FF3535"> <img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-171C26?style=flat-square&amp;logo=neo4j&amp;logoColor=4AE0A4"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"> <img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"></p>
+<p><sub>🏁 <a href="https://rnd.incheon.ac.kr/linc/online/edu_view.do?edu_pbanc_sn=60">초광역 지역문제 해결형 해커톤</a><br>주최 · 인천대학교 × 울산대학교 &nbsp; | &nbsp; <b>장려상</b></sub></p>
+</td></tr>
+<tr>
+<td width="50%" valign="top"><h3>🧭 Ulsainer</h3><p><b>관광 미션 · iOS / Android</b></p><p>관광지 탐색부터 미션·커뮤니티·방문 기록까지 연결하는 모바일 앱.</p><p><img alt="React Native" src="https://img.shields.io/badge/React%20Native-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="Expo" src="https://img.shields.io/badge/Expo-171C26?style=flat-square&amp;logo=expo&amp;logoColor=E8EDF5"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"> <img alt="Kakao SDK" src="https://img.shields.io/badge/Kakao%20SDK-171C26?style=flat-square&amp;logo=kakao&amp;logoColor=FEE500"></p><p><sub>🏁 <a href="https://api.visitkorea.or.kr/">2026 관광데이터 활용 공모전</a><br>주최 · 한국관광공사 &nbsp; | &nbsp; 코드 비공개</sub></p></td>
+<td width="50%" valign="top"><h3>⚖️ <a href="https://github.com/ulsanung-del/legal-screening-assistant">Deepgle Legal ↗</a></h3><p><b>AI 계약서 스크리닝</b></p><p>위험 조항·근거 법령·검토 보고서를 한 화면에서 확인하는 법무 AI.</p><p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-171C26?style=flat-square&amp;logo=googlegemini&amp;logoColor=E8EDF5"> <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-171C26?style=flat-square&amp;logo=langchain&amp;logoColor=4AE0A4"> <img alt="Chroma" src="https://img.shields.io/badge/Chroma-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iIzRBRTBBNCI%2BPGNpcmNsZSBjeD0iNiIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjE4IiByPSI0Ii8%2BPC9nPjwvc3ZnPg%3D%3D"></p><p><sub>🏁 <a href="https://aisw.daegu.ac.kr/article/photo25/detail/222842">2026 Google AI Agent Challenge</a> 예선<br>주최 · 경북대·대구대·영남대·울산대·한동대 SW중심대학</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><h3>🤝 <a href="https://github.com/US-VIBE/us_vibe">US Vibe ↗</a></h3><p><b>AI 협업 학습 시뮬레이터</b></p><p>AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 경험하는 워크스페이스.</p><p><img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="NestJS" src="https://img.shields.io/badge/NestJS-171C26?style=flat-square&amp;logo=nestjs&amp;logoColor=FF3535"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-171C26?style=flat-square&amp;logo=postgresql&amp;logoColor=E8EDF5"> <img alt="Redis" src="https://img.shields.io/badge/Redis-171C26?style=flat-square&amp;logo=redis&amp;logoColor=FF3535"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"></p><p><sub>💡 워크스페이스 UI · 채팅/API 연동 · 산출물 AI 평가</sub></p></td>
+<td width="50%" valign="top"><h3>🌱 <a href="https://github.com/rokmc1893/Capstone-Design">결혼·출산 준비 헬스케어 ↗</a></h3><p><b>건강 관리 · 모바일 웹</b></p><p>건강 지표·검사 결과를 시각화하고 미션·커뮤니티로 꾸준한 관리를 지원.</p><p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Vite" src="https://img.shields.io/badge/Vite-171C26?style=flat-square&amp;logo=vite&amp;logoColor=FF3535"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTQgMjBWMTJtOCA4VjRtOCAxNlY4IiBzdHJva2U9IiM2MURBRkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-171C26?style=flat-square&amp;logo=tailwindcss&amp;logoColor=61DAFB"></p><p><sub>💡 온보딩 · 로그인/인증 연동 · 미션·검사 리포트 UI</sub></p></td>
+</tr>
+</table>
 
 <details>
 <summary><b>🤝 More Projects & Collaboration</b></summary>
-
 <br>
-
-| 프로젝트 | 작업 내용 | 기술 |
-| :--- | :--- | :--- |
-| [3D 아바타 패션 UI](https://github.com/UOUHCI/UOU_HCI_02_FE) | 상품 탐색과 3D 아바타·의상 미리보기 인터페이스 | React · TypeScript · Three.js · React Three Fiber · Zustand |
-| 배웅길 <sub>비공개</sub> | 반려동물 장례시설 탐색·비용 비교·추모영상 모바일 웹 | React · TypeScript · FastAPI · Supabase |
-| 데이터 분석 팀 프로젝트 <sub>비공개</sub> | Jupyter 노트북 기반 팀 분석 작업 | Python · Pandas · NumPy · Matplotlib · Seaborn |
-
+<table>
+<tr><td width="50%" valign="top"><h4>👕 <a href="https://github.com/UOUHCI/UOU_HCI_02_FE">3D 아바타 패션 UI ↗</a></h4><p>상품 탐색 · 3D 아바타 · 의상 미리보기</p><p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Three.js" src="https://img.shields.io/badge/Three.js-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=E8EDF5"> <img alt="React Three Fiber" src="https://img.shields.io/badge/React%20Three%20Fiber-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=61DAFB"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"></p></td>
+<td width="50%" valign="top"><h4>🐾 배웅길 <sub>비공개</sub></h4><p>반려동물 장례시설 탐색 · 비용 비교 · 추모영상</p><p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"></p></td></tr>
+</table>
 </details>
 
 ## 🟩 Season Telemetry / 3D Contributions
