@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="28" viewBox="0 0 108 28" role="img" aria-labelledby="email-title">
+  <title id="email-title">Email — smin0108@gmail.com</title>
+  <rect width="108" height="28" fill="#FF3535"/>
+  <rect x="9" y="5" width="23" height="18" rx="3" fill="#FFFFFF"/>
+  <g transform="translate(11 7) scale(.76)">
+    <path fill="#4285F4" d="M2 20h4V9L0 4.5V18a2 2 0 0 0 2 2"/>
+    <path fill="#34A853" d="M18 20h4a2 2 0 0 0 2-2V4.5L18 9"/>
+    <path fill="#FBBC04" d="M18 1.5V9l6-4.5V3a3 3 0 0 0-4.8-2.4"/>
+    <path fill="#EA4335" d="M6 9V1.5l6 4.5 6-4.5V9l-6 4.5"/>
+    <path fill="#C5221F" d="M0 3v1.5L6 9V1.5L4.8.6A3 3 0 0 0 0 3"/>
+  </g>
+  <text x="42" y="18.5" fill="#FFFFFF" font-family="Verdana,DejaVu Sans,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2">EMAIL</text>
+</svg>

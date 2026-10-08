@@ -7,8 +7,7 @@
 </div>
 
 <div align="center">
-<a href="mailto:smin0108@gmail.com"><img alt="Email" src="https://img.shields.io/badge/EMAIL-FF3535?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"></a>
-<a href="https://www.linkedin.com/in/%EC%86%8C%EB%AF%BC-%EC%9C%A0-3231a1360/"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-171C26?style=for-the-badge&amp;logoColor=white"></a>
+<a href="mailto:smin0108@gmail.com" title="smin0108@gmail.com"><img alt="Email — smin0108@gmail.com" src="./assets/email.svg" height="28"></a>
 <a href="https://github.com/rokmc1893?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/GITHUB-171C26?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
 
 </div>
