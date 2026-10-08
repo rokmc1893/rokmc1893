@@ -88,16 +88,21 @@
 <p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Vite" src="https://img.shields.io/badge/Vite-171C26?style=flat-square&amp;logo=vite&amp;logoColor=FF3535"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTQgMjBWMTJtOCA4VjRtOCAxNlY4IiBzdHJva2U9IiM2MURBRkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-171C26?style=flat-square&amp;logo=tailwindcss&amp;logoColor=61DAFB"></p>
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top">
+<h3>🐾 배웅길 <sub>코드 비공개</sub></h3>
+<p><b>구분</b> · 개인 사이드 프로젝트<br><b>개발 인원</b> · 1인 개발</p>
+<p><b>개발 내용</b><br><b>반려동물 장례시설을 찾고 비용을 비교하는 모바일 웹.</b><br>시설 탐색·조건별 비용 비교·사진 추모영상 기능 개발.</p>
+<p><b>담당 역할 · 프론트엔드 · 백엔드 구현</b></p>
+<ul>
+<li>시설 탐색·비용 비교 UI 및 API 구현</li>
+<li>전국 시설 데이터 수집·정규화 및 조회 API 연동</li>
+<li>카카오 로그인·회원 관리 및 사진 추모영상 기능 구현</li>
+</ul>
+<p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"></p>
+</td>
+</tr>
 </table>
-
-<details>
-<summary><b>🤝 More Projects & Collaboration</b></summary>
-<br>
-<table>
-<tr><td width="50%" valign="top"><h4>👕 <a href="https://github.com/UOUHCI/UOU_HCI_02_FE">3D 아바타 패션 UI ↗</a></h4><p>상품 탐색 · 3D 아바타 · 의상 미리보기</p><p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Three.js" src="https://img.shields.io/badge/Three.js-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=E8EDF5"> <img alt="React Three Fiber" src="https://img.shields.io/badge/React%20Three%20Fiber-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=61DAFB"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"></p></td>
-<td width="50%" valign="top"><h4>🐾 배웅길 <sub>비공개</sub></h4><p>반려동물 장례시설 탐색 · 비용 비교 · 추모영상</p><p><b>담당 역할 · 프론트엔드·백엔드 구현</b><br>시설 탐색·비용 비교 UI 및 API 구현<br>전국 시설 데이터 수집·정규화와 조회 API 연동</p><p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"></p></td></tr>
-</table>
-</details>
 
 ## 🟩 Season Telemetry / 3D Contributions
 
