@@ -24,36 +24,44 @@
 
 ## 🏎️ 프로젝트 및 대회 참가
 
-### [정책핏 인천](https://github.com/rokmc1893/INU-X-UOU) · 🏆 장려상
-
-- **대회:** [초광역 지역문제 해결형 해커톤](https://rnd.incheon.ac.kr/linc/online/edu_view.do?edu_pbanc_sn=60) · **주최:** 인천대학교 × 울산대학교 · **팀:** F4
-- **개발 내용:** 산업 수요와 정책을 비교해 **지원 공백·중복 후보 분석 및 검토서 초안 생성**
-- **기술:** Python, Streamlit, Neo4j, OpenAI, Next.js
-
-### Ulsainer
-
-- **대회:** [2026 관광데이터 활용 공모전](https://api.visitkorea.or.kr/) · **주최:** 한국관광공사
-- **개발 내용:** **관광지 탐색·미션·커뮤니티·방문 기록** 기능을 갖춘 모바일 앱
-- **기술:** React Native, Expo, TypeScript, Supabase, Kakao SDK
-
-### [Deepgle Legal](https://github.com/ulsanung-del/legal-screening-assistant)
-
-- **대회:** [2026 Google AI Agent Challenge](https://aisw.daegu.ac.kr/article/photo25/detail/222842) 예선
-- **주최:** 경북대·대구대·영남대·울산대·한동대 SW중심대학
-- **개발 내용:** **위험 조항·근거 법령·검토 보고서**를 한 화면에서 확인하는 AI 계약서 분석 서비스
-- **기술:** React, TypeScript, FastAPI, Gemini, LangGraph, Chroma
-
-### [US Vibe](https://github.com/US-VIBE/us_vibe) · AI 협업 학습 시뮬레이터
-
-- **담당 역할:** **워크스페이스 UI 개발, 채팅·API 연동, 산출물 AI 평가**
-- **개발 내용:** AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 진행하는 협업 학습 서비스
-- **기술:** Next.js, TypeScript, NestJS, PostgreSQL, Redis, OpenAI
-
-### [결혼·출산 준비 헬스케어](https://github.com/rokmc1893/Capstone-Design)
-
-- **담당 역할:** **온보딩, 로그인·인증 연동, 미션·검사 리포트 UI 개발**
-- **개발 내용:** 건강 지표·검사 결과 시각화와 미션·커뮤니티 기능을 갖춘 건강 관리 모바일 웹
-- **기술:** React, TypeScript, Vite, Zustand, Recharts, Tailwind CSS
+<table>
+<tr>
+<td colspan="2" valign="top">
+<h3><a href="https://github.com/rokmc1893/INU-X-UOU">정책핏 인천 ↗</a> · 🏆 장려상</h3>
+<p><b>대회</b> · <a href="https://rnd.incheon.ac.kr/linc/online/edu_view.do?edu_pbanc_sn=60">초광역 지역문제 해결형 해커톤</a><br><b>주최</b> · 인천대학교 × 울산대학교<br><b>팀</b> · F4</p>
+<p><b>개발 내용</b><br><b>산업 수요와 정책을 비교하는 정책 분석 앱.</b><br>지원 공백·중복 후보를 찾고 검토서 초안 생성.</p>
+<p><img alt="Python" src="https://img.shields.io/badge/Python-171C26?style=flat-square&amp;logo=python&amp;logoColor=E8EDF5"> <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-171C26?style=flat-square&amp;logo=streamlit&amp;logoColor=FF3535"> <img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-171C26?style=flat-square&amp;logo=neo4j&amp;logoColor=4AE0A4"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"> <img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>🧭 Ulsainer</h3>
+<p><b>대회</b> · <a href="https://api.visitkorea.or.kr/">2026 관광데이터 활용 공모전</a><br><b>주최</b> · 한국관광공사</p>
+<p><b>개발 내용</b><br><b>관광지 탐색과 여행 기록을 위한 모바일 앱.</b><br>관광 미션·커뮤니티·방문 기록 기능 개발.</p>
+<p><img alt="React Native" src="https://img.shields.io/badge/React%20Native-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="Expo" src="https://img.shields.io/badge/Expo-171C26?style=flat-square&amp;logo=expo&amp;logoColor=E8EDF5"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"> <img alt="Kakao SDK" src="https://img.shields.io/badge/Kakao%20SDK-171C26?style=flat-square&amp;logo=kakao&amp;logoColor=FEE500"></p>
+</td>
+<td width="50%" valign="top">
+<h3>⚖️ <a href="https://github.com/ulsanung-del/legal-screening-assistant">Deepgle Legal ↗</a></h3>
+<p><b>대회</b> · <a href="https://aisw.daegu.ac.kr/article/photo25/detail/222842">2026 Google AI Agent Challenge 예선</a><br><b>주최</b> · 경북대·대구대·영남대·울산대·한동대 SW중심대학</p>
+<p><b>개발 내용</b><br><b>계약서의 위험 조항을 확인하는 AI 분석 서비스.</b><br>위험 조항·근거 법령·검토 보고서를 한 화면에 표시.</p>
+<p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-171C26?style=flat-square&amp;logo=googlegemini&amp;logoColor=E8EDF5"> <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-171C26?style=flat-square&amp;logo=langchain&amp;logoColor=4AE0A4"> <img alt="Chroma" src="https://img.shields.io/badge/Chroma-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iIzRBRTBBNCI%2BPGNpcmNsZSBjeD0iNiIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjE4IiByPSI0Ii8%2BPC9nPjwvc3ZnPg%3D%3D"></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>🤝 <a href="https://github.com/US-VIBE/us_vibe">US Vibe ↗</a></h3>
+<p><b>담당 역할</b><br><b>워크스페이스 UI 개발 · 채팅/API 연동 · 산출물 AI 평가</b></p>
+<p><b>개발 내용</b><br><b>AI 팀원과 협업을 연습하는 학습 시뮬레이터.</b><br>역할 분담·채팅·산출물 리뷰·회고 기능 개발.</p>
+<p><img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="NestJS" src="https://img.shields.io/badge/NestJS-171C26?style=flat-square&amp;logo=nestjs&amp;logoColor=FF3535"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-171C26?style=flat-square&amp;logo=postgresql&amp;logoColor=E8EDF5"> <img alt="Redis" src="https://img.shields.io/badge/Redis-171C26?style=flat-square&amp;logo=redis&amp;logoColor=FF3535"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"></p>
+</td>
+<td width="50%" valign="top">
+<h3>🌱 <a href="https://github.com/rokmc1893/Capstone-Design">결혼·출산 준비 헬스케어 ↗</a></h3>
+<p><b>담당 역할</b><br><b>온보딩 · 로그인/인증 연동 · 미션·검사 리포트 UI 개발</b></p>
+<p><b>개발 내용</b><br><b>건강 지표와 검사 결과를 확인하는 모바일 웹.</b><br>건강 데이터 시각화·미션·커뮤니티 기능 개발.</p>
+<p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Vite" src="https://img.shields.io/badge/Vite-171C26?style=flat-square&amp;logo=vite&amp;logoColor=FF3535"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTQgMjBWMTJtOCA4VjRtOCAxNlY4IiBzdHJva2U9IiM2MURBRkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-171C26?style=flat-square&amp;logo=tailwindcss&amp;logoColor=61DAFB"></p>
+</td>
+</tr>
+</table>
 
 <details>
 <summary><b>🤝 More Projects & Collaboration</b></summary>
