@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="./assets/intro.svg" alt="AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다." width="100%">
+  <img src="./assets/intro.svg?v=racing-theme-2" alt="AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다." width="100%">
 </div>
 
 <div align="center">

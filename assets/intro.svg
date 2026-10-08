@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="88" viewBox="0 0 1200 88" role="img" aria-labelledby="intro-title intro-desc">
   <title id="intro-title">AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다.</title>
-  <desc id="intro-desc">짙은 청회색 배경 위 밝은 소개 문구가 부드럽게 나타나고 천천히 위아래로 움직입니다.</desc>
+  <desc id="intro-desc">레이싱 애니메이션과 같은 어두운 그라데이션과 카본 무늬, 빨간 포인트 위에 밝은 소개 문구가 부드럽게 나타납니다.</desc>
+  <defs>
+    <linearGradient id="intro-bg" x2="1" y2="1"><stop stop-color="#171c26"/><stop offset="1" stop-color="#080b10"/></linearGradient>
+    <pattern id="intro-carbon" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 16 16 0M-8 8 8-8M8 24 24 8" stroke="#fff" stroke-opacity=".025" stroke-width="4"/></pattern>
+    <clipPath id="intro-clip"><rect x=".5" y=".5" width="1199" height="87" rx="12"/></clipPath>
+  </defs>
   <style>
     .reveal { animation: appear 1.2s ease-out both; }
     .float { animation: float 6s ease-in-out infinite; }
@@ -8,7 +13,12 @@
     @keyframes float { 0%,100% { transform: translateY(2px); } 50% { transform: translateY(-2px); } }
     @media (prefers-reduced-motion: reduce) { .reveal,.float { animation: none; opacity: 1; transform: none; } }
   </style>
-  <rect x=".5" y=".5" width="1199" height="87" rx="12" fill="#202D3C" stroke="#334155"/>
+  <g clip-path="url(#intro-clip)">
+    <rect width="1200" height="88" fill="url(#intro-bg)"/>
+    <rect width="1200" height="88" fill="url(#intro-carbon)"/>
+    <rect width="6" height="88" fill="#ff3535"/>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="87" rx="12" fill="none" stroke="#2a303b"/>
   <g class="reveal">
     <g class="float">
       <text x="600" y="45" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif" font-size="26" font-weight="500" fill="#E8EDF5">AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다.</text>
