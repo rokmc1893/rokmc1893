@@ -2,7 +2,9 @@
   <img src="./assets/f1-racing.svg" alt="소민의 Engineering Garage — F1 레이싱 애니메이션" width="100%">
 </div>
 
-> **AI와 데이터를 활용해 직관적이고 매력적인 프론트엔드 경험을 구축하는 개발자 소민입니다.**
+<div align="center">
+  <img src="./assets/intro.svg" alt="AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다." width="100%">
+</div>
 
 <div align="center">
 <a href="mailto:smin0108@gmail.com"><img alt="Email" src="https://img.shields.io/badge/EMAIL-FF3535?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"></a>

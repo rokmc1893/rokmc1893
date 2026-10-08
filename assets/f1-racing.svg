@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
-  <title id="title">Somin Yoo — Engineering at race pace</title>
-  <desc id="desc">A red open-wheel racing car accelerates through a dark circuit. Build with purpose. Tune with precision. Ship as a team.</desc>
+  <title id="title">Somin Yoo — AI, Data and Workflows</title>
+  <desc id="desc">A red open-wheel racing car accelerates through a dark circuit. AI, data and workflows connect ideas to better services.</desc>
   <defs>
     <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171c26"/><stop offset="1" stop-color="#080b10"/></linearGradient>
     <linearGradient id="body" x2="0.8" y2="1"><stop stop-color="#ff5b57"/><stop offset=".5" stop-color="#ed292f"/><stop offset="1" stop-color="#990b22"/></linearGradient>
@@ -30,7 +30,7 @@
     <g font-family="Arial,Helvetica,sans-serif">
       <text x="44" y="42" fill="#8e98a9" font-size="12" letter-spacing="3">ROKMC1893 / ENGINEERING GARAGE</text>
       <text x="42" y="100" fill="#f5f7fa" font-size="52" font-weight="800" letter-spacing="-2">SOMIN YOO<tspan fill="#ff3535">.</tspan></text>
-      <text x="45" y="131" fill="#a9b2c1" font-size="14" letter-spacing="1.5">FRONTEND DEVELOPER • BUILT FOR CLARITY</text>
+      <text x="45" y="131" fill="#a9b2c1" font-size="14" letter-spacing="1.5">AI • DATA • CONNECTED SERVICES</text>
       <rect x="1095" y="31" width="60" height="26" fill="url(#checker)" opacity=".8"/>
       <g class="lights" fill="#ff3535"><circle cx="990" cy="44" r="4"/><circle cx="1007" cy="44" r="4"/><circle cx="1024" cy="44" r="4"/><circle cx="1041" cy="44" r="4"/><circle cx="1058" cy="44" r="4"/></g>
     </g>
@@ -74,9 +74,9 @@
     </g>
     <g font-family="Arial,Helvetica,sans-serif">
       <path d="M44 330h1112" stroke="#303846"/>
-      <text x="45" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">01 / SPEED</text>
-      <text x="415" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">02 / PRECISION</text>
-      <text x="860" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">03 / TEAMWORK</text>
+      <text x="45" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">01 / AI</text>
+      <text x="415" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">02 / DATA</text>
+      <text x="860" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">03 / WORKFLOWS</text>
     </g>
   </g>
 </svg>

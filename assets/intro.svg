@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="88" viewBox="0 0 1200 88" role="img" aria-labelledby="intro-title intro-desc">
+  <title id="intro-title">AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다.</title>
+  <desc id="intro-desc">검은색 소개 문구가 부드럽게 나타나고 천천히 위아래로 움직입니다.</desc>
+  <style>
+    .reveal { animation: appear 1.2s ease-out both; }
+    .float { animation: float 6s ease-in-out infinite; }
+    @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes float { 0%,100% { transform: translateY(2px); } 50% { transform: translateY(-2px); } }
+    @media (prefers-reduced-motion: reduce) { .reveal,.float { animation: none; opacity: 1; transform: none; } }
+  </style>
+  <rect x=".5" y=".5" width="1199" height="87" rx="12" fill="#F6F8FA" stroke="#E6E9EE"/>
+  <g class="reveal">
+    <g class="float">
+      <text x="600" y="45" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif" font-size="26" font-weight="500" fill="#000000">AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다.</text>
+    </g>
+  </g>
+</svg>
