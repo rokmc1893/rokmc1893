@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d12">
+<title>APEX — After the rain</title>
+<style>
+  :root {
+    /* 차량과 환경을 바꾸는 주요 디자인 변수 */
+    --main-color: #d5f64b;
+    --accent-color: #ff593e;
+    --carbon-color: #121b21;
+    --tire-color: #ff3d49;
+    --background: #080d12;
+    --text: #eaf0ed;
+    --muted: #a1afaf;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--text);
+    background: var(--background);
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  }
+  button, input { font: inherit; }
+  button { cursor: pointer; }
+  button:focus-visible, input:focus-visible {
+    outline: 2px solid var(--main-color);
+    outline-offset: 6px;
+  }
+  .experience {
+    max-width: 1920px;
+    min-height: 100svh;
+    margin: auto;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 60% 35%, #17262b, #080d12 72%);
+  }
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 5%;
+    border-bottom: 1px solid #ffffff18;
+  }
+  .brand {
+    font-size: 22px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -.07em;
+  }
+  .brand span { color: var(--main-color); }
+  .edition, .eyebrow, .caption {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+  .edition { color: var(--muted); }
+  .intro { padding: 40px 5% 0; }
+  .eyebrow { color: var(--main-color); }
+  h1 {
+    font-size: clamp(38px, 6.8vw, 98px);
+    line-height: .95;
+    letter-spacing: -.07em;
+    font-weight: 600;
+    margin: 16px 0 10px;
+  }
+  .intro p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+  .viewport { overflow: hidden; }
+  .stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1440 / 800;
+    isolation: isolate;
+  }
+  .scene, .particles {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+  }
+  .particles { pointer-events: none; }
+  .stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg, #080d1200 65%, #080d1244 85%, #080d12 100%
+    );
+  }
+
+  /*
+   * 계속 움직이는 그룹만 합성 힌트 지정.
+   * SVG 필터와 Canvas는 재래스터화가 필요하므로 전체 장면에
+   * will-change를 무분별하게 적용하여 GPU 메모리를 낭비하지 않는다.
+   */
+  .moving, .wheel-rotor, #body {
+    will-change: transform;
+  }
+  #rainLight, #heat { will-change: opacity; }
+  .paint { fill: var(--main-color); }
+  .accent { fill: var(--accent-color); }
+  .carbon { fill: var(--carbon-color); }
+  .compound { stroke: var(--tire-color); }
+
+  .dashboard {
+    position: relative;
+    z-index: 2;
+    margin: -15px 5% 0;
+    padding: 22px 0 30px;
+    border-top: 1px solid #ffffff26;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    gap: 36px;
+  }
+  .telemetry { display: flex; align-items: baseline; gap: 14px; }
+  .speed {
+    min-width: 3ch;
+    font-size: clamp(42px, 6vw, 72px);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -.07em;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .units { color: var(--muted); font-size: 11px; }
+  .caption { color: var(--muted); }
+  .rpm { margin-top: 12px; }
+  .slider-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--main-color);
+    cursor: pointer;
+  }
+  .buttons { display: flex; gap: 9px; }
+  button {
+    min-height: 44px;
+    padding: 0 18px;
+    color: var(--text);
+    border: 1px solid #ffffff38;
+    background: #ffffff06;
+    border-radius: 3px;
+    transition: background .2s, border-color .2s;
+  }
+  button:hover { background: #ffffff12; border-color: #ffffff80; }
+  button[aria-pressed="true"] {
+    color: #090e10;
+    background: var(--main-color);
+    border-color: var(--main-color);
+  }
+  .footer {
+    padding: 0 5% 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #839291;
+    font-size: 10px;
+    letter-spacing: .1em;
+  }
+  @media (max-width: 680px) {
+    .masthead { padding-top: 20px; padding-bottom: 20px; }
+    .edition { font-size: 8px; letter-spacing: .08em; }
+    .intro { padding-top: 32px; }
+    .stage { width: 130%; margin-left: -15%; }
+    .dashboard {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 0;
+    }
+    .buttons { grid-column: 1 / -1; }
+    .buttons button { flex: 1; }
+    .footer { font-size: 8px; letter-spacing: .03em; }
+  }
+</style>
+</head>
+<body>
+<main class="experience">
+  <header class="masthead">
+    <div class="brand" aria-label="APEX">APEX<span> /</span></div>
+    <div class="edition">PRIVATE TEST SESSION &nbsp; / &nbsp; 01</div>
+  </header>
+
+  <section aria-labelledby="title">
+    <div class="intro">
+      <div class="eyebrow">AFTER THE RAIN — CIRCUIT STUDY</div>
+      <h1>Engineered to disappear.</h1>
+      <p>비가 그친 서킷. 공기를 가르는 한 대의 머신.</p>
+    </div>
+
+    <div class="viewport">
+      <div class="stage" id="stage">
+        <svg class="scene" id="scene" viewBox="0 0 1440 800"
+             role="img" aria-labelledby="sceneTitle sceneDescription">
+          <title id="sceneTitle">젖은 야간 서킷을 달리는 F1 머신</title>
+          <desc id="sceneDescription">
+            사람이 없는 콕핏, 회전하는 슬릭 타이어, 하부 스파크,
+            붉은 레인 라이트와 젖은 노면의 반사가 있는 애니메이션.
+          </desc>
+          <defs>
+            <linearGradient id="sky" x2="0" y2="1">
+              <stop stop-color="#080d12"/>
+              <stop offset=".65" stop-color="#263b41"/>
+              <stop offset="1" stop-color="#899a93"/>
+            </linearGradient>
+            <linearGradient id="asphalt" x2=".15" y2="1">
+              <stop stop-color="#26343a"/>
+              <stop offset=".45" stop-color="#15232a"/>
+              <stop offset="1" stop-color="#080e15"/>
+            </linearGradient>
+            <linearGradient id="metal" x1="0" y1="0" x2=".15" y2="1">
+              <stop stop-color="#ffffff" stop-opacity=".8"/>
+              <stop offset=".15" stop-color="#ffffff" stop-opacity=".15"/>
+              <stop offset=".45" stop-color="#000000" stop-opacity=".03"/>
+              <stop offset=".8" stop-color="#000000" stop-opacity=".5"/>
+              <stop offset="1" stop-color="#000000" stop-opacity=".8"/>
+            </linearGradient>
+            <linearGradient id="rubber" x2=".85" y2="1">
+              <stop stop-color="#3a4449"/>
+              <stop offset=".22" stop-color="#10161a"/>
+              <stop offset=".58" stop-color="#030609"/>
+              <stop offset="1" stop-color="#1b252c"/>
+            </linearGradient>
+            <radialGradient id="wheelMetal">
+              <stop stop-color="#64717a"/>
+              <stop offset=".23" stop-color="#10161c"/>
+              <stop offset=".7" stop-color="#303d45"/>
+              <stop offset=".92" stop-color="#10171d"/>
+              <stop offset="1" stop-color="#616e73"/>
+            </radialGradient>
+            <radialGradient id="pool">
+              <stop stop-color="#b8d1c6" stop-opacity=".13"/>
+              <stop offset="1" stop-color="#b8d1c6" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="reflectFade" x2="0" y2="1">
+              <stop stop-color="white" stop-opacity=".42"/>
+              <stop offset=".45" stop-color="white" stop-opacity=".12"/>
+              <stop offset="1" stop-color="black"/>
+            </linearGradient>
+            <mask id="reflectionMask" maskUnits="userSpaceOnUse"
+                  x="150" y="635" width="1150" height="165">
+              <rect x="150" y="635" width="1150" height="165"
+                    fill="url(#reflectFade)"/>
+            </mask>
+
+            <!-- 固定シードの小さな模様を再利用し、外部画像を不要にする。 -->
+            <pattern id="carbonWeave" width="8" height="8"
+                     patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+              <rect width="8" height="8" fill="#0c1319"/>
+              <path d="M0 1H8M0 5H8" stroke="#617078" stroke-opacity=".19"
+                    stroke-width="2"/>
+              <path d="M2 0V8M6 0V8" stroke="#000" stroke-opacity=".4"
+                    stroke-width="2"/>
+            </pattern>
+            <pattern id="seats" width="32" height="18" patternUnits="userSpaceOnUse">
+              <path d="M2 4H24L28 10H0Z" fill="#718483" opacity=".35"/>
+              <path d="M0 15H32" stroke="#18252c" stroke-width="3"/>
+            </pattern>
+            <pattern id="grandstandPattern" width="1200" height="350"
+                     patternUnits="userSpaceOnUse">
+              <path d="M20 345V229L150 167H680L755 230V345Z" fill="#16252d"/>
+              <path d="M35 329L159 192H664L731 329Z" fill="url(#seats)"/>
+              <path d="M-20 166L151 126H687L777 169Z" fill="#122028"/>
+              <path d="M-20 167H777" stroke="#9baaa7" stroke-opacity=".4"/>
+              <path d="M65 171V342M715 173V342M370 171V342"
+                    stroke="#23353c" stroke-width="7"/>
+              <path d="M932 350V72M923 350L932 72L941 350"
+                    stroke="#53646a" fill="none" stroke-width="3"/>
+              <path d="M880 70H984" stroke="#a2b4ae" stroke-width="7"/>
+              <path d="M883 75H982" stroke="#ecf9df" stroke-width="3"/>
+              <path d="M900 82L795 347H1060L965 82Z"
+                    fill="#d4ead0" opacity=".025"/>
+            </pattern>
+            <pattern id="fencePattern" width="1200" height="160"
+                     patternUnits="userSpaceOnUse">
+              <rect width="1200" height="160" fill="#111e25"/>
+              <path d="M0 20H1200M0 42H1200M0 64H1200M0 86H1200"
+                    stroke="#7d9598" stroke-opacity=".25"/>
+              <path d="M0 0V98M75 0V98M150 0V98M225 0V98M300 0V98
+                       M375 0V98M450 0V98M525 0V98M600 0V98M675 0V98
+                       M750 0V98M825 0V98M900 0V98M975 0V98M1050 0V98M1125 0V98"
+                    stroke="#8ca1a0" stroke-opacity=".2"/>
+              <path d="M0 0V160M300 0V160M600 0V160M900 0V160"
+                    stroke="#718481" stroke-width="5"/>
+              <rect y="103" width="1200" height="57" fill="#29393a"/>
+              <path d="M0 105H1200" stroke="#b5c1b8" stroke-opacity=".35"/>
+              <g fill="#c2cbc0" opacity=".62" font-family="Arial,sans-serif"
+                 font-weight="800" font-size="25" font-style="italic">
+                <text x="70" y="142" letter-spacing="7">APEX / RACING</text>
+                <text x="500" y="142" letter-spacing="7">BEYOND LIMITS</text>
+                <text x="955" y="142" letter-spacing="7">APEX /</text>
+              </g>
+            </pattern>
+            <pattern id="kerbPattern" width="240" height="30"
+                     patternUnits="userSpaceOnUse">
+              <rect width="240" height="30" fill="#a7b1aa"/>
+              <rect width="120" height="30" fill="#a9443a"/>
+              <path d="M0 3H240M0 19H240" stroke="#000" stroke-opacity=".2"
+                    stroke-width="3"/>
+            </pattern>
+            <pattern id="roadPattern" width="1200" height="240"
+                     patternUnits="userSpaceOnUse">
+              <g stroke="#b6c9c5" stroke-opacity=".09">
+                <path d="M40 20H330M520 95H790M810 170H1150M140 207H600"/>
+                <path d="M30 122H120M350 155H440M860 47H940" stroke-width="2"/>
+              </g>
+              <g stroke="#02070c" stroke-opacity=".4" stroke-width="3">
+                <path d="M170 63H510M730 223H1180M800 16H1000"/>
+              </g>
+            </pattern>
+
+            <filter id="softShadow" x="-30%" y="-100%" width="160%" height="300%">
+              <feGaussianBlur stdDeviation="10"/>
+            </filter>
+            <filter id="reflectionBlur" x="-10%" y="-20%" width="120%" height="140%">
+              <feGaussianBlur stdDeviation="1.3 .7"/>
+            </filter>
+            <filter id="glow" x="-200%" y="-200%" width="500%" height="500%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="rotorBlur">
+              <feGaussianBlur stdDeviation=".8"/>
+            </filter>
+            <filter id="heatFilter" x="-30%" y="-40%" width="160%" height="180%">
+              <feTurbulence type="fractalNoise" baseFrequency=".018 .11"
+                            numOctaves="1" seed="8" result="noise"/>
+              <feDisplacementMap id="heatDisplacement" in="SourceGraphic"
+                                 in2="noise" scale="8"
+                                 xChannelSelector="R" yChannelSelector="G"/>
+              <feGaussianBlur stdDeviation="1.1"/>
+            </filter>
+
+            <!-- 재사용되는 타이어: 표면 하이라이트와 회전 부품을 분리한다. -->
+            <g id="tire">
+              <circle r="70" fill="url(#rubber)" stroke="#030608" stroke-width="2"/>
+              <circle r="63" fill="none" stroke="#53606a" stroke-opacity=".23"/>
+              <circle r="56" fill="none" class="compound" stroke-width="2.5"
+                      opacity=".85"/>
+              <circle r="48" fill="#020608" stroke="#4b555a" stroke-width="1"/>
+              <circle r="42" fill="url(#wheelMetal)"/>
+              <circle r="35" fill="none" stroke="#8e9a9e" stroke-opacity=".15"
+                      stroke-width="7"/>
+              <path d="M-58-22A62 62 0 0 1 38-49" fill="none"
+                    stroke="#d2e2e2" stroke-opacity=".22" stroke-width="2"/>
+              <path d="M-57 26A63 63 0 0 0 48 42" fill="none"
+                    stroke="#000" stroke-opacity=".8" stroke-width="5"/>
+            </g>
+            <g id="spokes" fill="#a8b4b8" opacity=".7">
+              <path d="M-4-8L-6-37L1-40L5-9ZM8-4L37-6L40 1L9 5Z
+                       M4 8L6 37L-1 40L-5 9ZM-8 4L-37 6L-40-1L-9-5Z"/>
+              <path d="M-2-62A62 62 0 0 1 23-58" fill="none"
+                    stroke="#ecebd8" stroke-width="2"/>
+            </g>
+          </defs>
+
+          <rect width="1440" height="510" fill="url(#sky)"/>
+          <ellipse cx="1050" cy="335" rx="610" ry="160" fill="url(#pool)"/>
+
+          <!-- 모든 패럴랙스 스트립은 1200 단위 주기. 화면 양쪽에 여유분을 둔다. -->
+          <g id="far" class="moving">
+            <rect x="-1200" y="70" width="4800" height="350"
+                  fill="url(#grandstandPattern)" opacity=".72"/>
+          </g>
+          <rect y="367" width="1440" height="80" fill="#c7d6c1" opacity=".035"/>
+          <g id="middle" class="moving">
+            <rect x="-1200" y="350" width="4800" height="160"
+                  fill="url(#fencePattern)"/>
+          </g>
+          <rect y="509" width="1440" height="291" fill="url(#asphalt)"/>
+          <g id="kerb" class="moving">
+            <rect x="-1200" y="517" width="4800" height="18"
+                  fill="url(#kerbPattern)"/>
+          </g>
+          <path d="M0 542H1440" stroke="#b3c6bd" stroke-opacity=".28" stroke-width="2"/>
+          <g id="road" class="moving">
+            <rect x="-1200" y="541" width="4800" height="259"
+                  fill="url(#roadPattern)"/>
+          </g>
+          <ellipse cx="790" cy="657" rx="660" ry="105" fill="url(#pool)"/>
+          <ellipse cx="728" cy="636" rx="440" ry="15" fill="#000"
+                   opacity=".9" filter="url(#softShadow)"/>
+
+          <!-- 반사는 동일한 차량 인스턴스를 참조하므로 바퀴·차체·LED가 함께 반영된다. -->
+          <g mask="url(#reflectionMask)" filter="url(#reflectionBlur)">
+            <use href="#car" transform="translate(0 1270) scale(1 -1)"/>
+          </g>
+
+          <!-- 작은 배기 주변 영역에만 변위 필터를 적용한 열기 근사 효과. -->
+          <g id="heat" filter="url(#heatFilter)" fill="none"
+             stroke="#b6d3cd" opacity=".15">
+            <path d="M426 477C387 460 361 491 313 472S247 480 213 465"
+                  stroke-width="5"/>
+            <path d="M428 485C386 494 344 466 298 492S245 477 219 494"
+                  stroke-width="3"/>
+          </g>
+
+          <g id="car">
+            <!-- 반대편 휠: 측면 시점의 깊이를 만드는 조금 작은 실루엣. -->
+            <g fill="#03070a" stroke="#39444b" stroke-width="2">
+              <ellipse cx="449" cy="554" rx="59" ry="66"/>
+              <ellipse cx="950" cy="554" rx="58" ry="66"/>
+            </g>
+
+            <g id="body" class="moving">
+              <!-- 리어 윙: 엔드플레이트, 다층 플랩, DRS 연결부와 지지대. -->
+              <path d="M321 424L431 420L447 456L331 461Z"
+                    fill="url(#carbonWeave)" stroke="#607076"/>
+              <path d="M316 415L427 410L435 425L320 432Z" class="paint"/>
+              <path d="M319 434L436 429L440 439L322 447Z" fill="#738889"/>
+              <path d="M324 447L442 441L445 450L328 459Z" fill="#0c141a"/>
+              <path d="M315 411L330 409L340 474L327 478Z" class="accent"/>
+              <path d="M425 410L440 413L455 470L441 472Z" class="paint"/>
+              <path d="M398 451L416 532H435L415 449Z" fill="url(#carbonWeave)"/>
+              <path d="M373 425L375 446" stroke="#bcc4bc" stroke-width="3"/>
+
+              <!-- 디퓨저와 바닥 가장자리의 카본 층. -->
+              <path d="M374 599L439 586L985 598L1092 609L1085 625
+                       L455 630L390 621Z" fill="url(#carbonWeave)"/>
+              <path d="M402 615L450 622H1049" fill="none"
+                    stroke="#73817e" stroke-width="2" opacity=".65"/>
+              <path d="M375 602L395 626M391 598L413 628M411 597L431 628"
+                    stroke="#03070a" stroke-width="7"/>
+
+              <!-- 서스펜션 위시본은 차체 그룹에 포함되며 타이어 중심은 노면에 고정. -->
+              <g fill="none" stroke="#10191e" stroke-width="8">
+                <path d="M456 561L567 525M456 561L568 591"/>
+                <path d="M961 560L833 514M961 560L851 591"/>
+              </g>
+              <g fill="none" stroke="#81928e" stroke-width="1.5" opacity=".6">
+                <path d="M456 558L567 522M961 557L833 511"/>
+              </g>
+              <path d="M868 503L952 563" stroke="#11191f" stroke-width="5"/>
+
+              <!-- 엔진 커버 / 에어박스 / 사이드포드. -->
+              <path id="shell" d="M423 543L487 497L556 467L594 378
+                Q600 365 617 372L654 425L704 453L804 475
+                L890 510L1038 547L1049 575L887 595L573 606
+                L477 585Z" class="paint"/>
+              <use href="#shell" fill="url(#metal)" class="metal-overlay"
+                   style="fill:url(#metal)"/>
+              <path d="M499 523Q566 473 670 475L824 501L870 555
+                       Q742 589 569 587L505 572Z"
+                    fill="url(#carbonWeave)"/>
+              <path d="M513 523Q628 493 806 516L843 545
+                       Q665 531 560 568L512 560Z" class="paint"/>
+              <path d="M526 524Q628 501 797 519" fill="none"
+                    stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+              <path d="M792 490L837 506L819 525L775 511Z" fill="#03090d"/>
+              <path d="M791 491L832 506" stroke="#9aa8a0" stroke-width="2"/>
+              <path d="M510 574Q669 552 828 560L840 570
+                       Q663 598 540 590Z" fill="#03080b" opacity=".8"/>
+              <path d="M589 396L605 376L625 400L619 424L596 422Z"
+                    fill="#080e12" stroke="#8a9868" stroke-width="2"/>
+              <path d="M601 377L614 384" stroke="#e5f6d2" stroke-width="2"/>
+              <path d="M567 470L596 433L644 447" fill="none"
+                    stroke="#e9f7be" stroke-opacity=".5" stroke-width="2"/>
+
+              <!-- 빈 콕핏: 사람이나 헬멧 없이 버킷 시트와 스티어링 휠만 배치. -->
+              <path d="M650 452Q694 419 752 444L794 478
+                       L736 496L672 480Z" fill="#02080b" stroke="#869485"
+                    stroke-width="2"/>
+              <path d="M664 448L679 438L695 444L715 478L693 480Z"
+                    fill="#263137" stroke="#4a575b"/>
+              <path d="M675 449L690 451L704 477" fill="none"
+                    stroke="#748079" stroke-opacity=".4" stroke-width="2"/>
+              <path d="M749 467L762 451" stroke="#697674" stroke-width="4"/>
+              <path d="M751 444L771 453L766 463L746 455Z"
+                    fill="#141e25" stroke="#a4b1a6" stroke-width="2"/>
+              <path d="M755 449L762 452" stroke="#a7dccc" stroke-width="2"/>
+              <circle cx="752" cy="452" r="1.8" class="accent"/>
+
+              <!-- Halo의 후방 아치와 전방 중앙 지지대. -->
+              <path d="M646 451Q645 409 687 412L750 422Q767 426 777 453"
+                    fill="none" stroke="#101a1f" stroke-width="12"
+                    stroke-linecap="round"/>
+              <path d="M648 445Q650 410 687 414L746 424"
+                    fill="none" stroke="#becbb8" stroke-opacity=".7"
+                    stroke-width="2"/>
+              <path d="M747 424L783 477L772 481L737 428Z"
+                    fill="url(#carbonWeave)"/>
+              <path d="M781 478L843 495" stroke="#1c272b" stroke-width="4"/>
+              <path d="M823 483L850 489L847 499L821 495Z" class="paint"/>
+
+              <!-- 낮고 긴 노즈와 독립된 다단 프론트 윙. -->
+              <path d="M789 482Q849 485 914 520L1071 551L1088 565
+                       L1066 581L946 554L842 541Z" class="paint"/>
+              <path d="M792 483Q860 495 916 523L1066 555"
+                    fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+              <path d="M862 530L1052 565L1061 578L918 553Z"
+                    fill="#102025" opacity=".65"/>
+              <path d="M1049 567L1054 608M1070 571L1078 608"
+                    stroke="#233136" stroke-width="7"/>
+              <path d="M1009 597L1148 588L1181 611L1159 625L1000 620Z"
+                    fill="url(#carbonWeave)" stroke="#6d7c7d"/>
+              <path d="M1020 591L1146 583L1174 597L1013 607Z" class="paint"/>
+              <path d="M1010 610L1168 604M1009 618L1163 614"
+                    fill="none" stroke="#a5b5ae" stroke-opacity=".6"
+                    stroke-width="2"/>
+              <path d="M1146 578L1161 580L1186 617L1172 632L1159 624Z"
+                    class="accent"/>
+
+              <path d="M472 498L521 478L536 488L491 513Z" fill="#222e32"/>
+              <path d="M437 485L453 481L455 491L438 494Z" fill="#05090d"
+                    stroke="#667773"/>
+
+              <!-- 스폰서 대신 자체 그래픽을 사용한다. -->
+              <g fill="#102018" font-family="Arial,sans-serif"
+                 font-weight="900" font-style="italic">
+                <text x="599" y="538" font-size="30" letter-spacing="-2">APEX</text>
+                <text x="880" y="533" font-size="20">07</text>
+              </g>
+              <text x="571" y="582" fill="#a7b5ae" font-family="monospace"
+                    font-size="9" letter-spacing="3">GROUND EFFECT / 01</text>
+              <g fill="#dce6cb" opacity=".6">
+                <circle cx="559" cy="486" r="2"/>
+                <circle cx="826" cy="551" r="2"/>
+                <circle cx="570" cy="595" r="2"/>
+              </g>
+
+              <path d="M405 576L427 580L429 597L404 594Z" fill="#020608"/>
+              <g id="rainLight" filter="url(#glow)">
+                <rect x="406" y="579" width="14" height="13" rx="2" fill="#ff1735"/>
+                <path d="M408 582H418M408 586H418M408 590H418"
+                      stroke="#ffd0cb" stroke-width="1"/>
+              </g>
+            </g>
+
+            <!-- 타이어 외피는 정지, 휠 커버와 마킹만 회전해 접지감을 유지. -->
+            <g transform="translate(475 565)">
+              <use href="#tire"/>
+              <g id="rearRotor" class="wheel-rotor">
+                <use href="#spokes"/>
+                <g class="wheelSmear" opacity="0" filter="url(#rotorBlur)">
+                  <use href="#spokes" transform="rotate(19)" opacity=".5"/>
+                  <use href="#spokes" transform="rotate(39)" opacity=".3"/>
+                  <use href="#spokes" transform="rotate(63)" opacity=".2"/>
+                </g>
+              </g>
+              <circle r="10" fill="#111b22" stroke="#acb5b4" stroke-width="2"/>
+              <circle r="4" class="accent"/>
+            </g>
+            <g transform="translate(963 565)">
+              <use href="#tire"/>
+              <g id="frontRotor" class="wheel-rotor">
+                <use href="#spokes"/>
+                <g class="wheelSmear" opacity="0" filter="url(#rotorBlur)">
+                  <use href="#spokes" transform="rotate(19)" opacity=".5"/>
+                  <use href="#spokes" transform="rotate(39)" opacity=".3"/>
+                  <use href="#spokes" transform="rotate(63)" opacity=".2"/>
+                </g>
+              </g>
+              <circle r="10" fill="#111b22" stroke="#acb5b4" stroke-width="2"/>
+              <circle r="4" class="accent"/>
+            </g>
+          </g>
+
+          <!-- 接地面は固定。高速タイヤの下面を薄い影で引き締める。 -->
+          <path d="M437 635H513M925 635H1001" stroke="#010508"
+                stroke-width="4" stroke-linecap="round" opacity=".85"/>
+        </svg>
+        <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+      </div>
+    </div>
+
+    <div class="dashboard" aria-label="주행 제어">
+      <div>
+        <div class="telemetry">
+          <output id="speed" class="speed" aria-label="현재 속도">0</output>
+          <span class="units">KM/H</span>
+        </div>
+        <div class="caption rpm">WHEEL <span id="rpm">0</span> RPM</div>
+      </div>
+      <div>
+        <label class="slider-label" for="targetSpeed">
+          <span>목표 속도</span>
+          <span><output id="targetValue" for="targetSpeed">320</output> KM/H</span>
+        </label>
+        <input id="targetSpeed" type="range" min="0" max="360" step="5" value="320">
+      </div>
+      <div class="buttons">
+        <button id="brake" type="button" aria-pressed="false">브레이크</button>
+        <button id="pause" type="button" aria-pressed="false">일시정지</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>07 / EXPERIMENTAL AERODYNAMICS</span>
+      <span>WET ASPHALT · NIGHT SESSION</span>
+    </footer>
+  </section>
+</main>
+
+<script>
+(() => {
+  "use strict";
+
+  const CONFIG = Object.freeze({
+    mainColor: "#d5f64b",
+    accentColor: "#ff593e",
+    tireColor: "#ff3d49",
+    initialSpeedKmh: 320,
+    maxSpeedKmh: 360,
+    accelerationSeconds: 5.5,
+    brakingSeconds: 2.2,
+    tireRadiusMeters: 0.36,
+    tireRadiusSvg: 70,
+    sparkRate: 100,           // 실제 하부 접촉 중 초당 발생량
+    maxSparks: 180,
+    maxPixelRatio: 2,
+    physicsStep: 1 / 240,     // 렌더링 주사율과 독립적인 물리 적분
+    suspensionStiffness: 6200,
+    suspensionDamping: 130,
+    parallax: { far: 0.018, middle: 0.14, kerb: 1, road: 1 }
+  });
+
+  const $ = id => document.getElementById(id);
+  const root = document.documentElement;
+  root.style.setProperty("--main-color", CONFIG.mainColor);
+  root.style.setProperty("--accent-color", CONFIG.accentColor);
+  root.style.setProperty("--tire-color", CONFIG.tireColor);
+
+  const stage = $("stage");
+  const canvas = $("particles");
+  const ctx = canvas.getContext("2d");
+  const body = $("body");
+  const light = $("rainLight");
+  const heat = $("heat");
+  const displacement = $("heatDisplacement");
+  const rotors = [$("rearRotor"), $("frontRotor")];
+  const smears = [...document.querySelectorAll(".wheelSmear")];
+  const slider = $("targetSpeed");
+  const targetValue = $("targetValue");
+  const speedOutput = $("speed");
+  const rpmOutput = $("rpm");
+  const brakeButton = $("brake");
+  const pauseButton = $("pause");
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+
+  const layers = Object.entries(CONFIG.parallax).map(([id, ratio]) => ({
+    element: $(id), ratio
+  }));
+  const pixelsPerMeter = CONFIG.tireRadiusSvg / CONFIG.tireRadiusMeters;
+  const TWO_PI = Math.PI * 2;
+  const clamp = (n, lo, hi) => Math.min(hi, Math.max(lo, n));
+  const random = (lo, hi) => lo + Math.random() * (hi - lo);
+
+  let speed = 0;              // m/s
+  let distance = 0;           // 실제 이동 거리, meter
+  let simTime = 0;
+  let accumulator = 0;
+  let y = 0, vy = 0;
+  let pitch = 0, longitudinal = 0;
+  let roadHeight = 0;
+  let contact = 0;
+  let sparkBudget = 0;
+  let wheelPhase = 0;
+  let running = false;
+  let braking = false;
+  let lastTime = null;
+  let raf = 0;
+  let lastTelemetry = -1;
+  let lastHeat = -1;
+  let lightIntensity = 0;
+  let backingScale = 1;
+  const sparks = [];
+  const wind = Array.from({ length: 26 }, () => ({
+    x: random(0, 1440),
+    y: random(545, 790),
+    length: random(25, 130),
+    depth: random(.35, 1),
+    alpha: random(.025, .1)
+  }));
+
+  slider.max = CONFIG.maxSpeedKmh;
+  slider.value = CONFIG.initialSpeedKmh;
+  targetValue.value = slider.value;
+
+  let transition = {
+    from: 0,
+    to: CONFIG.initialSpeedKmh / 3.6,
+    elapsed: 0,
+    duration: CONFIG.accelerationSeconds,
+    braking: false
+  };
+
+  /*
+   * CSS cubic-bezier와 동일한 방식으로 x(t)를 역산하고 y(t)를 평가한다.
+   * 프레임마다 일정 비율을 더하는 lerp와 달리 전환 시간과 가감속 곡선이
+   * 명시적이며, 60Hz/120Hz에서도 동일한 시간 축을 따른다.
+   */
+  function bezier(progress, x1, y1, x2, y2) {
+    const sample = (t, a, b) =>
+      3 * (1 - t) * (1 - t) * t * a +
+      3 * (1 - t) * t * t * b + t * t * t;
+    let lo = 0, hi = 1;
+    for (let i = 0; i < 14; i++) {
+      const middle = (lo + hi) * .5;
+      if (sample(middle, x1, x2) < progress) lo = middle;
+      else hi = middle;
+    }
+    return sample((lo + hi) * .5, y1, y2);
+  }
+
+  function setTarget(kmh) {
+    const next = clamp(kmh, 0, CONFIG.maxSpeedKmh) / 3.6;
+    const decelerating = next < speed;
+    transition = {
+      from: speed,
+      to: next,
+      elapsed: 0,
+      duration: Math.max(.35,
+        (decelerating ? CONFIG.brakingSeconds : CONFIG.accelerationSeconds) *
+        Math.abs(next - speed) / (CONFIG.initialSpeedKmh / 3.6)),
+      braking: decelerating
+    };
+  }
+
+  /*
+   * 난수를 매 프레임 생성하는 대신 이동 거리의 함수로 노면을 정의한다.
+   * 같은 위치에는 같은 요철이 존재하며, 고속일수록 더 높은 시간 주파수로
+   * 차체에 입력된다. 높은 스프링 상수와 감쇠로 짧은 하드 서스펜션 반응을 만든다.
+   * 시각 효과용 축약 모델이며 타이어 변형·공력 CFD를 계산하지는 않는다.
+   */
+  function surfaceAt(meters) {
+    const small = Math.sin(meters * 3.1) * .24 +
+                  Math.sin(meters * 7.7 + .6) * .12;
+    const seam = Math.pow(Math.max(0, Math.sin(meters * .69)), 22) * 1.25;
+    return small + seam;
+  }
+
+  function spawnSpark() {
+    if (sparks.length >= CONFIG.maxSparks) return;
+    const life = random(.16, .5);
+    sparks.push({
+      x: 437 + longitudinal + random(0, 34),
+      y: 631 + Math.min(y, 1),
+      vx: -speed * pixelsPerMeter * random(.1, .25),
+      vy: random(-150, -35),
+      life,
+      initialLife: life,
+      width: random(.7, 1.8),
+      bounced: false
+    });
+  }
+
+  function physics(dt) {
+    const previousSpeed = speed;
+    transition.elapsed += dt;
+    const progress = clamp(transition.elapsed / transition.duration, 0, 1);
+    const eased = transition.braking
+      ? bezier(progress, .2, 0, .35, 1)
+      : bezier(progress, .16, .8, .3, 1);
+
+    speed = progress === 1
+      ? transition.to
+      : transition.from + (transition.to - transition.from) * eased;
+
+    const acceleration = (speed - previousSpeed) / dt;
+    const travelled = (previousSpeed + speed) * .5 * dt;
+    distance += travelled;
+    simTime += dt;
+
+    /*
+     * 트랙과 타이어는 동일한 travelled를 사용한다.
+     * v = rω에서 Δθ = Δs/r. 타이어가 정지해도 배경만 움직이거나
+     * 속도 조절 후 휠 RPM만 따로 변하는 불일치를 방지한다.
+     */
+    wheelPhase = (wheelPhase + travelled / CONFIG.tireRadiusMeters) % TWO_PI;
+
+    const normalizedSpeed = speed / (CONFIG.maxSpeedKmh / 3.6);
+    roadHeight = surfaceAt(distance) * Math.min(speed / 15, 1);
+    const downforce = normalizedSpeed * normalizedSpeed * .8;
+    const targetY = -roadHeight + downforce;
+    const springAcceleration =
+      CONFIG.suspensionStiffness * (targetY - y) -
+      CONFIG.suspensionDamping * vy;
+
+    vy += springAcceleration * dt;
+    y += vy * dt;
+
+    // 가속 시 노즈 상승, 제동 시 노즈 하강. 큰 출렁임은 의도적으로 제한한다.
+    const targetPitch = clamp(-acceleration * .025, -.65, .55);
+    const response = 1 - Math.exp(-dt * 14);
+    pitch += (targetPitch - pitch) * response;
+    longitudinal += (
+      clamp(-acceleration * .7, -14, 12) - longitudinal
+    ) * response;
+
+    /*
+     * 고속 다운포스로 줄어든 유효 지상고와 뒤쪽 노면 돌기를 비교한다.
+     * 접촉 구간에서만 입자를 방출하며, dt 기반 누적량으로 프레임률에
+     * 따른 스파크 개수 차이를 없앤다.
+     */
+    const rearRoad = surfaceAt(distance - 2.4);
+    const clearance = 1.3 - downforce - rearRoad + y * .15;
+    contact = speed > 35 ? clamp((.22 - clearance) * 3, 0, 1) : 0;
+    sparkBudget += CONFIG.sparkRate * contact * dt;
+    while (sparkBudget >= 1) {
+      spawnSpark();
+      sparkBudget--;
+    }
+
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const p = sparks[i];
+      p.life -= dt;
+      if (p.life <= 0) {
+        sparks.splice(i, 1);
+        continue;
+      }
+      p.vy += 480 * dt;
+      p.vx *= Math.exp(-dt * 1.4);
+      p.x += p.vx * dt;
+      p.y += p.vy * dt;
+      if (p.y >= 635 && p.vy > 0) {
+        p.y = 635;
+        p.vy *= -.32;
+        p.vx *= .72;
+        if (p.bounced) p.life = Math.min(p.life, .04);
+        p.bounced = true;
+      }
+    }
+
+    for (const streak of wind) {
+      streak.x -= travelled * pixelsPerMeter * streak.depth;
+      if (streak.x < -streak.length) {
+        streak.x = 1440 + random(0, 400);
+        streak.y = random(545, 790);
+      }
+    }
+  }
+
+  /*
+   * Canvas 내부 좌표를 SVG의 1440×800에 맞춘다.
+   * 크기 측정과 backing store 변경은 ResizeObserver에서만 수행하므로
+   * requestAnimationFrame 안에서 레이아웃 읽기/쓰기가 교차하지 않는다.
+   */
+  function resizeCanvas() {
+    const rect = stage.getBoundingClientRect();
+    const dpr = Math.min(devicePixelRatio || 1, CONFIG.maxPixelRatio);
+    canvas.width = Math.max(1, Math.round(rect.width * dpr));
+    canvas.height = Math.max(1, Math.round(rect.height * dpr));
+    backingScale = canvas.width / 1440;
+    render();
+  }
+
+  function drawParticles() {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.setTransform(backingScale, 0, 0, canvas.height / 800, 0, 0);
+
+    const velocityFactor = speed / (CONFIG.maxSpeedKmh / 3.6);
+
+    // 근경 바람선은 노면 방향으로만 이동하고 속도에 비례해 길어진다.
+    ctx.lineWidth = .8;
+    for (const streak of wind) {
+      ctx.strokeStyle = `rgba(181,214,217,${streak.alpha * velocityFactor})`;
+      ctx.beginPath();
+      ctx.moveTo(streak.x, streak.y);
+      ctx.lineTo(streak.x + streak.length * velocityFactor, streak.y);
+      ctx.stroke();
+    }
+
+    ctx.globalCompositeOperation = "lighter";
+
+    // 레인 라이트의 노면 반사: 넓은 광량 분포와 가느다란 수평 streak.
+    if (lightIntensity > 0) {
+      const glow = ctx.createRadialGradient(414, 650, 0, 414, 650, 62);
+      glow.addColorStop(0, `rgba(255,28,54,${lightIntensity * .17})`);
+      glow.addColorStop(1, "rgba(255,28,54,0)");
+      ctx.save();
+      ctx.translate(414, 650);
+      ctx.scale(1, .23);
+      ctx.translate(-414, -650);
+      ctx.fillStyle = glow;
+      ctx.fillRect(348, 584, 132, 132);
+      ctx.restore();
+    }
+
+    /*
+     * 입자 위치는 물리 스텝에서 계산하고 여기서는 노출 시간 동안 이동한
+     * 길이를 선분으로 그린다. 빠른 입자는 긴 궤적을 가져 모션 블러처럼 보인다.
+     * shadowBlur 대신 굵고 어두운 외곽 + 밝은 코어의 2회 스트로크를 사용한다.
+     */
+    for (const p of sparks) {
+      const alpha = Math.max(0, p.life / p.initialLife);
+      const exposure = .008;
+      const tailX = p.x - p.vx * exposure;
+      const tailY = p.y - p.vy * exposure;
+
+      ctx.lineWidth = p.width * 4;
+      ctx.strokeStyle = `rgba(255,91,15,${alpha * .16})`;
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+      ctx.lineTo(tailX, tailY);
+      ctx.stroke();
+
+      ctx.lineWidth = p.width;
+      ctx.strokeStyle = `rgba(255,${Math.round(140 + 100 * alpha)},115,${alpha})`;
+      ctx.stroke();
+
+      // 수면 반사는 지면 y=635를 기준으로 뒤집고 세로 방향으로 압축한다.
+      const reflectedY = 638 + (635 - p.y) * .32;
+      ctx.lineWidth = p.width * 1.7;
+      ctx.strokeStyle = `rgba(255,106,30,${alpha * .16})`;
+      ctx.beginPath();
+      ctx.moveTo(p.x - 8, reflectedY);
+      ctx.lineTo(tailX + 10, reflectedY + 1);
+      ctx.stroke();
+    }
+    ctx.globalCompositeOperation = "source-over";
+  }
+
+  function render() {
+    /*
+     * 누적 거리를 주기 길이로 나머지 연산하여 무한 스크롤한다.
+     * 스트립의 패턴 주기 1200과 동일하므로 오프셋이 돌아가도 이음매가 없다.
+     * 원경/중경만 거리 계수를 달리하고 접지 노면·연석은 휠과 1:1 동기화한다.
+     */
+    for (const layer of layers) {
+      const offset = (distance * pixelsPerMeter * layer.ratio) % 1200;
+      layer.element.setAttribute("transform", `translate(${-offset} 0)`);
+    }
+
+    body.setAttribute(
+      "transform",
+      `translate(${longitudinal.toFixed(3)} ${y.toFixed(3)}) ` +
+      `rotate(${pitch.toFixed(3)} 720 565)`
+    );
+    const angle = wheelPhase * 180 / Math.PI;
+    for (const rotor of rotors) {
+      rotor.setAttribute("transform", `rotate(${angle.toFixed(3)})`);
+    }
+    const blurOpacity = clamp(speed / 65, 0, .85);
+    for (const smear of smears) smear.setAttribute("opacity", blurOpacity);
+
+    // 1.1초 주기의 더블 펄스. CSS 타이머 대신 시뮬레이션 시간을 써서 일시정지도 일치.
+    const pulse = simTime % 1.1;
+    lightIntensity = speed > .5 && (pulse < .09 || (pulse > .17 && pulse < .26))
+      ? 1 : .13;
+    light.setAttribute("opacity", lightIntensity);
+
+    // 비싼 변위 필터 갱신은 12Hz로 제한하고 작은 배기 영역에만 사용한다.
+    if (simTime - lastHeat > 1 / 12 || lastHeat < 0) {
+      lastHeat = simTime;
+      displacement.setAttribute("scale", 5 + Math.sin(simTime * 17) * 4);
+      heat.setAttribute("opacity", clamp(speed / 400, 0, .22));
+      heat.setAttribute("transform", `translate(${Math.sin(simTime * 11) * 4} 0)`);
+    }
+
+    // 숫자는 10Hz 갱신으로 충분하다. 불필요한 DOM 텍스트 변경을 줄인다.
+    if (simTime - lastTelemetry > .1 || lastTelemetry < 0) {
+      lastTelemetry = simTime;
+      speedOutput.value = String(Math.round(speed * 3.6));
+      rpmOutput.textContent = Math.round(
+        speed / (TWO_PI * CONFIG.tireRadiusMeters) * 60
+      ).toLocaleString("ko-KR");
+    }
+    drawParticles();
+  }
+
+  function frame(timestamp) {
+    if (!running) return;
+    if (lastTime === null) lastTime = timestamp;
+
+    /*
+     * 탭 복귀나 긴 프레임에서 거대한 dt가 스프링을 폭발시키지 않도록 제한한다.
+     * 고정 240Hz 물리 스텝과 화면 주사율의 rAF 렌더링을 분리한다.
+     * 60fps는 기기 성능에 따라 달라지며 120Hz 화면에서는 rAF가 그 주기를 따른다.
+     */
+    accumulator += Math.min((timestamp - lastTime) / 1000, .05);
+    lastTime = timestamp;
+    while (accumulator >= CONFIG.physicsStep) {
+      physics(CONFIG.physicsStep);
+      accumulator -= CONFIG.physicsStep;
+    }
+    render();
+    raf = requestAnimationFrame(frame);
+  }
+
+  function setRunning(value) {
+    running = value;
+    cancelAnimationFrame(raf);
+    lastTime = null;
+    accumulator = 0;
+    pauseButton.textContent = value ? "일시정지" : "재생";
+    pauseButton.setAttribute("aria-pressed", String(!value));
+    if (value && !document.hidden) raf = requestAnimationFrame(frame);
+  }
+
+  slider.addEventListener("input", () => {
+    targetValue.value = slider.value;
+    if (!braking) setTarget(Number(slider.value));
+  });
+
+  brakeButton.addEventListener("click", () => {
+    braking = !braking;
+    brakeButton.setAttribute("aria-pressed", String(braking));
+    brakeButton.textContent = braking ? "브레이크 해제" : "브레이크";
+    setTarget(braking ? 0 : Number(slider.value));
+  });
+
+  pauseButton.addEventListener("click", () => setRunning(!running));
+
+  document.addEventListener("visibilitychange", () => {
+    cancelAnimationFrame(raf);
+    lastTime = null;
+    accumulator = 0;
+    if (!document.hidden && running) raf = requestAnimationFrame(frame);
+  });
+
+  // 모션 감소 환경에서는 정적인 첫 화면을 제공하고 사용자가 직접 재생할 수 있다.
+  reducedMotion.addEventListener("change", event => {
+    if (event.matches) setRunning(false);
+  });
+
+  new ResizeObserver(resizeCanvas).observe(stage);
+  resizeCanvas();
+  setRunning(!reducedMotion.matches);
+})();
+</script>
+</body>
+</html>
