@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
   <title id="title">Somin Yoo — AI, Data and Workflows</title>
-  <desc id="desc">A red open-wheel racing car accelerates through a dark circuit. AI, data and workflows connect ideas to better services.</desc>
+  <desc id="desc">A red open-wheel racing car with an empty cockpit accelerates through a dark circuit. AI, data and workflows connect ideas to better services.</desc>
   <defs>
     <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171c26"/><stop offset="1" stop-color="#080b10"/></linearGradient>
     <linearGradient id="body" x2="0.8" y2="1"><stop stop-color="#ff5b57"/><stop offset=".5" stop-color="#ed292f"/><stop offset="1" stop-color="#990b22"/></linearGradient>
@@ -61,7 +61,7 @@
         <path d="M649 203h52l30 17h-60Z" fill="#0a0d13"/>
         <path d="M659 194q20-22 55-1l19 20" fill="none" stroke="#eef2f7" stroke-width="5"/>
         <path d="M701 186h18v24h-8Z" fill="#a4acb8"/>
-        <ellipse cx="699" cy="195" rx="11" ry="9" fill="#e6edf4"/><path d="M690 195h17" stroke="#252a33" stroke-width="4"/>
+        <path d="M679 205l9-18 12 4 9 19z" fill="#1a222d" stroke="#697584" stroke-width="1.5"/><path d="M687 190l11 3m-10 2 13 3" stroke="#84909c" stroke-opacity=".7" stroke-width="1"/><path d="M713 207l4-10" stroke="#8e9bab" stroke-width="2"/><path d="M709 194l12 3-2 6-13-3z" fill="#121a23" stroke="#d3dbe1" stroke-width="1"/>
         <path d="M546 247h175l37-11 111 14" fill="none" stroke="#f7f7f9" stroke-width="5"/>
         <path d="M448 256h454v8H448" fill="#1d2430"/>
         <path d="M879 239h39v16h-39" fill="#ed292f"/>
