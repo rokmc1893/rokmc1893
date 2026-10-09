@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="./assets/f1-racing.svg" alt="소민의 Engineering Garage — F1 레이싱 애니메이션" width="100%">
+  <a href="https://rokmc1893.github.io/rokmc1893/"><img src="./assets/f1-racing.svg" alt="소민의 Engineering Garage — F1 레이싱 배너" width="100%"></a>
+  <p><a href="https://rokmc1893.github.io/rokmc1893/">▶ 전체 화면에서 F1 주행 애니메이션 보기</a></p>
 </div>
 
 <div align="center">
