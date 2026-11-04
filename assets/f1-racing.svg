@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
-  <title id="title">Somin Yoo — AI, Data and Workflows</title>
-  <desc id="desc">A red open-wheel racing car with an empty cockpit accelerates through a dark circuit. AI, data and workflows connect ideas to better services.</desc>
+  <title id="title">유소민 · AX 엔지니어를 향한 프로젝트 기록</title>
+  <desc id="desc">어두운 서킷을 달리는 빨간 F1 머신. AI와 함께 서비스를 만들며 AX 엔지니어를 목표로 하는 소민의 프로젝트 기록입니다.</desc>
   <defs>
     <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171c26"/><stop offset="1" stop-color="#080b10"/></linearGradient>
     <linearGradient id="body" x2="0.8" y2="1"><stop stop-color="#ff5b57"/><stop offset=".5" stop-color="#ed292f"/><stop offset="1" stop-color="#990b22"/></linearGradient>
@@ -27,10 +27,10 @@
     <rect width="1200" height="380" fill="url(#carbon)"/>
     <ellipse cx="800" cy="210" rx="460" ry="190" fill="url(#glow)"/>
     <path d="M0 0h8v380H0" fill="#ff3535"/>
-    <g font-family="Arial,Helvetica,sans-serif">
+    <g font-family="'Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif">
       <text x="44" y="42" fill="#8e98a9" font-size="12" letter-spacing="3">ROKMC1893 / ENGINEERING GARAGE</text>
       <text x="42" y="100" fill="#f5f7fa" font-size="52" font-weight="800" letter-spacing="-2">SOMIN YOO<tspan fill="#ff3535">.</tspan></text>
-      <text x="45" y="131" fill="#a9b2c1" font-size="14" letter-spacing="1.5">AI • DATA • CONNECTED SERVICES</text>
+      <text x="45" y="131" fill="#a9b2c1" font-size="14" letter-spacing="1.5">AI와 함께 만드는 서비스 · AX 엔지니어를 향해</text>
       <rect x="1095" y="31" width="60" height="26" fill="url(#checker)" opacity=".8"/>
       <g class="lights" fill="#ff3535"><circle cx="990" cy="44" r="4"/><circle cx="1007" cy="44" r="4"/><circle cx="1024" cy="44" r="4"/><circle cx="1041" cy="44" r="4"/><circle cx="1058" cy="44" r="4"/></g>
     </g>
@@ -72,7 +72,7 @@
       <g><circle cx="509" cy="246" r="32" fill="#07090c"/><circle cx="509" cy="246" r="29" fill="none" stroke="#343944" stroke-width="2"/><circle cx="509" cy="246" r="25" fill="none" stroke="#ffce52" stroke-width="1.5"/><circle cx="509" cy="246" r="17" fill="#181f29"/><g class="wheel" stroke="#84909e" stroke-width="3"><path d="M494 246h30m-15-15v30m-10.6-25.6 21.2 21.2m0-21.2-21.2 21.2"/></g><circle cx="509" cy="246" r="5" fill="#f2f4f7"/></g>
       <g><circle cx="866" cy="246" r="32" fill="#07090c"/><circle cx="866" cy="246" r="29" fill="none" stroke="#343944" stroke-width="2"/><circle cx="866" cy="246" r="25" fill="none" stroke="#ffce52" stroke-width="1.5"/><circle cx="866" cy="246" r="17" fill="#181f29"/><g class="wheel" stroke="#84909e" stroke-width="3"><path d="M851 246h30m-15-15v30m-10.6-25.6 21.2 21.2m0-21.2-21.2 21.2"/></g><circle cx="866" cy="246" r="5" fill="#f2f4f7"/></g>
     </g>
-    <g font-family="Arial,Helvetica,sans-serif">
+    <g font-family="'Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif">
       <path d="M44 330h1112" stroke="#303846"/>
       <text x="45" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">01 / AI</text>
       <text x="415" y="357" font-size="12" letter-spacing="2" fill="#f0f3f9">02 / DATA</text>
