@@ -1,17 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="248" viewBox="0 0 1200 248" role="img" aria-labelledby="title desc">
-<title id="title">유소민 · 웹·모바일 서비스와 AI 활용 프로젝트</title>
-<desc id="desc">AI와 함께 웹·모바일 서비스를 만들며, 사용자의 불편을 해결하는 경험을 쌓아 가는 개발자입니다. 문서·AI·서비스를 연결한 흐름을 표현했습니다.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+<title id="title">안녕하세요, 유소민입니다. AI와 함께 아이디어를 서비스로 연결합니다.</title>
+<desc id="desc">손을 흔드는 인사와 함께 데이터가 AI를 거쳐 서비스로 이어지는 흐름을 표현한 애니메이션이다.</desc>
+<defs>
+  <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#122b43"/><stop offset="1" stop-color="#101a2c"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#2dd4bf" stop-opacity=".15"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/></radialGradient>
+  <linearGradient id="core" x2="1" y2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#93c5fd" opacity=".12"/></pattern>
+  <clipPath id="clip"><rect width="1200" height="340" rx="20"/></clipPath>
+</defs>
 <style>
-:root {color-scheme:light dark;--bg:#f1f6fc;--ink:#162c46;--muted:#52667d;--blue:#0969da;--line:#c8d9ec;--card:#fff}
-@media(prefers-color-scheme:dark){:root{--bg:#142133;--ink:#edf3fa;--muted:#a6b9cf;--blue:#79b8ff;--line:#344f6e;--card:#1b2d43}}
 text{font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif}
+.hand{transform-box:fill-box;transform-origin:70% 75%;animation:wave 5s ease-in-out infinite}
+.packet{stroke-dasharray:10 190;animation:flow 4s linear infinite}
+.packet.second{animation-delay:-2s}.ring{transform-box:fill-box;transform-origin:center;animation:orbit 24s linear infinite}
+.spark{animation:glint 3s ease-in-out infinite}.cursor{animation:blink 1.2s steps(1) infinite}
+@keyframes wave{0%,35%,100%{transform:rotate(0)}5%,15%,25%{transform:rotate(16deg)}10%,20%,30%{transform:rotate(-10deg)}}
+@keyframes flow{to{stroke-dashoffset:-200}}@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes glint{50%{opacity:.45;transform:translateY(-3px)}}@keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.hand,.packet,.ring,.spark,.cursor{animation:none}.packet{stroke-dasharray:none;opacity:.5}}
 </style>
-<rect width="1200" height="248" rx="16" fill="var(--bg)"/>
-<text x="42" y="44" font-size="24" font-weight="700" fill="var(--ink)">유소민</text>
-<text x="42" y="97" font-size="30" font-weight="700" fill="var(--ink)">AI와 함께 웹·모바일 서비스를 만들며,</text>
-<text x="42" y="141" font-size="30" font-weight="700" fill="var(--ink)">사용자의 불편을 해결하는 경험을</text>
-<text x="42" y="185" font-size="30" font-weight="700" fill="var(--ink)">쌓아 가는 개발자입니다.</text>
-<path d="M1020 67v114" stroke="var(--line)" stroke-width="2"/>
-<g fill="var(--card)" stroke="var(--line)"><rect x="968" y="30" width="104" height="48" rx="10"/><rect x="968" y="100" width="104" height="48" rx="10"/><rect x="968" y="170" width="104" height="48" rx="10"/></g>
-<g text-anchor="middle" font-size="18" fill="var(--muted)"><text x="1020" y="61">문서</text><text x="1020" y="131">AI</text><text x="1020" y="201">서비스</text></g>
+<g clip-path="url(#clip)">
+<rect width="1200" height="340" fill="url(#surface)"/>
+<rect x="700" width="500" height="340" fill="url(#dots)"/>
+<ellipse cx="980" cy="165" rx="260" ry="220" fill="url(#halo)"/>
+<path d="M0 338H1200" stroke="url(#core)" stroke-width="4"/>
+<g class="hand"><text x="44" y="70" font-size="37" font-family="'Apple Color Emoji','Segoe UI Emoji',sans-serif">👋</text></g>
+<text x="101" y="65" fill="#82e7dc" font-size="23" font-weight="600">안녕하세요, 유소민입니다.</text>
+<text x="46" y="140" font-size="39" font-weight="750" fill="#f0f6fc">AI와 함께 아이디어를</text>
+<text x="46" y="196" font-size="39" font-weight="750" fill="#f0f6fc">서비스로 연결합니다.</text>
+<rect class="cursor" x="384" y="162" width="3" height="38" rx="1" fill="#2dd4bf"/>
+<text x="48" y="257" fill="#b0c5d9" font-size="18">데이터를 모으고, 화면과 기능을 연결하며</text>
+<text x="48" y="286" fill="#b0c5d9" font-size="18">AX 엔지니어를 향해 경험을 쌓아 갑니다.</text>
+
+<g fill="none" stroke="#365571" stroke-width="2"><path d="M816 105h76q28 0 28 28v35h45"/><path d="M816 238h76q28 0 28-28v-42"/><path d="M1017 168h68"/></g>
+<g fill="none" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round"><path class="packet" d="M816 105h76q28 0 28 28v35h45"/><path class="packet second" d="M816 238h76q28 0 28-28v-42h45"/><path class="packet" d="M1017 168h68"/></g>
+<g fill="#192f46" stroke="#365571"><rect x="752" y="78" width="72" height="55" rx="12"/><rect x="752" y="211" width="72" height="55" rx="12"/><rect x="1073" y="137" width="89" height="65" rx="12"/></g>
+<g stroke="#a6c9e7" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M775 90h19l9 9v23h-28zM794 90v10h9M782 108h14m-14 7h10"/><path d="m779 228-8 10 8 10m19-20 8 10-8 10m-8-22-5 25"/><rect x="1087" y="151" width="60" height="36" rx="3"/><path d="M1087 162h60m-52 9h14m-14 8h29"/></g>
+<circle cx="983" cy="168" r="48" fill="#112e40" stroke="#2dd4bf" stroke-opacity=".25"/>
+<circle class="ring" cx="983" cy="168" r="58" fill="none" stroke="#38bdf8" stroke-opacity=".55" stroke-dasharray="7 13"/>
+<rect x="950" y="135" width="66" height="66" rx="20" fill="url(#core)"/>
+<text x="983" y="178" font-size="27" font-weight="800" fill="#08283b" text-anchor="middle">AI</text>
+<g class="spark" fill="#82e7dc"><path d="m1044 60 3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/><circle cx="1118" cy="251" r="3"/></g>
+<g fill="#a6c0d8" font-size="15" text-anchor="middle"><text x="789" y="158">자료</text><text x="789" y="291">코드</text><text x="1118" y="227">서비스</text></g>
+</g>
 </svg>

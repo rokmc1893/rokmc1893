@@ -1,8 +1,8 @@
-name: Update racing profile
+name: 프로필 기여 기록 갱신
 
 on:
   schedule:
-    - cron: "17 18 * * *" # 매일 03:17 KST (UTC+9)
+    - cron: "17 18 * * *" # 매일 03:17 KST
   workflow_dispatch:
   push:
     branches: [main]
@@ -14,113 +14,69 @@ permissions:
   contents: write
 
 concurrency:
-  group: racing-profile-${{ github.ref }}
+  group: profile-assets-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  telemetry:
-    name: Generate 3D grass and racing telemetry
+  profile:
+    name: 잔디와 통계 이미지 생성
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    env:
-      HAS_PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN != '' }}
+    timeout-minutes: 15
     steps:
-      - name: Checkout profile
+      - name: 저장소 체크아웃
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
-      - name: Generate actual 3D contributions
-        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # latest verified 2026-10-07
+      - name: 실제 기여 기록으로 잔디 애니메이션 생성
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          outputs: |
+            profile/snake.svg?palette=github-light&color_snake=%230969da
+            profile/snake-dark.svg?palette=github-dark&color_snake=%232dd4bf
+
+      - name: 실제 기여 기록으로 3D 잔디 생성
+        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39
         env:
           GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Render stats.svg
-        if: env.HAS_PROFILE_TOKEN == 'true'
-        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=radical&bg_color=0D1117&title_color=FF3535&icon_color=FF3535&text_color=C9D1D9&border_color=30363D&show_icons=true&include_all_commits=true&hide_rank=true&custom_title=Season%20Telemetry&card_width=495
-          path: profile/stats.svg
-          token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
-          core_version: "2.1.3"
-          fail_on_error: "true"
-
-      - name: Render top-langs.svg
-        if: env.HAS_PROFILE_TOKEN == 'true'
-        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=radical&bg_color=0D1117&title_color=FF3535&icon_color=FF3535&text_color=C9D1D9&border_color=30363D&layout=compact&langs_count=6&card_width=495&custom_title=Power%20Unit%20Languages
-          path: profile/top-langs.svg
-          token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
-          core_version: "2.1.3"
-          fail_on_error: "true"
-
-      - name: Render pin-healthcare.svg
-        if: env.HAS_PROFILE_TOKEN == 'true'
-        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
-        with:
-          card: pin
-          options: username=${{ github.repository_owner }}&theme=radical&bg_color=0D1117&title_color=FF3535&icon_color=FF3535&text_color=C9D1D9&border_color=30363D&repo=Capstone-Design
-          path: profile/pin-healthcare.svg
-          token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
-          core_version: "2.1.3"
-          fail_on_error: "true"
-
-      - name: Render pin-legal.svg
-        if: env.HAS_PROFILE_TOKEN == 'true'
-        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
-        with:
-          card: pin
-          options: username=${{ github.repository_owner }}&theme=radical&bg_color=0D1117&title_color=FF3535&icon_color=FF3535&text_color=C9D1D9&border_color=30363D&repo=Google_AI_Agent
-          path: profile/pin-legal.svg
-          token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
-          core_version: "2.1.3"
-          fail_on_error: "true"
-
-      - name: Render pin-policy.svg
-        if: env.HAS_PROFILE_TOKEN == 'true'
-        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
-        with:
-          card: pin
-          options: username=${{ github.repository_owner }}&theme=radical&bg_color=0D1117&title_color=FF3535&icon_color=FF3535&text_color=C9D1D9&border_color=30363D&repo=INU-X-UOU
-          path: profile/pin-policy.svg
-          token: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
-          core_version: "2.1.3"
-          fail_on_error: "true"
-
-      - name: Fetch public telemetry without a PAT
-        if: env.HAS_PROFILE_TOKEN != 'true'
+      - name: 공개 활동 통계 카드 갱신
+        continue-on-error: true # 외부 통계 서비스 장애 시 기존 정상 이미지를 유지한다.
         env:
           PROFILE_OWNER: ${{ github.repository_owner }}
         run: python3 scripts/update-cards.py
 
-      - name: Validate generated assets
+      - name: 생성 이미지 검증
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import xml.etree.ElementTree as ET
           paths = [
-              Path("profile-3d-contrib/profile-green.svg"),
-              Path("profile-3d-contrib/profile-night-green.svg"),
-              *sorted(Path("profile").glob("*.svg")),
+              'profile/snake.svg', 'profile/snake-dark.svg',
+              'profile/stats.svg', 'profile/stats-dark.svg',
+              'profile/top-langs.svg', 'profile/top-langs-dark.svg',
+              'profile-3d-contrib/profile-green.svg',
+              'profile-3d-contrib/profile-night-green.svg',
           ]
-          if len(paths) != 7:
-              raise SystemExit("Expected 2 contribution graphs and 5 cards")
-          for path in paths:
+          for name in paths:
+              path = Path(name)
               if not path.is_file() or path.stat().st_size < 100:
-                  raise SystemExit(f"Missing or empty asset: {path}")
-              ET.parse(path)
+                  raise SystemExit(f'이미지가 없거나 비어 있다: {name}')
+              root = ET.parse(path).getroot()
+              if root.tag != '{http://www.w3.org/2000/svg}svg':
+                  raise SystemExit(f'SVG 파일이 아니다: {name}')
           PY
 
-      - name: Save telemetry when data changes
+      - name: 변경된 기여 이미지 저장
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib/profile-green.svg profile-3d-contrib/profile-night-green.svg profile/*.svg
+          git add profile/snake*.svg profile/stats*.svg profile/top-langs*.svg profile-3d-contrib/profile-green.svg profile-3d-contrib/profile-night-green.svg
           if git diff --cached --quiet; then
-            echo "Telemetry is already up to date."
+            echo "기여 이미지가 최신 상태다."
             exit 0
           fi
-          git commit -m "chore: refresh racing profile telemetry"
+          git commit -m "chore: 프로필 기여 기록과 통계 이미지 갱신"
+          git pull --rebase origin main
           git push origin HEAD:main

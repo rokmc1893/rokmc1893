@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" role="img" aria-labelledby="title desc">
+<title id="title">안녕하세요, 유소민입니다. AI와 함께 아이디어를 서비스로 연결합니다.</title>
+<desc id="desc">손을 흔드는 인사와 함께 데이터가 AI를 거쳐 서비스로 이어지는 흐름을 표현한 애니메이션이다.</desc>
+<defs>
+  <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#122b43"/><stop offset="1" stop-color="#101a2c"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#2dd4bf" stop-opacity=".15"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/></radialGradient>
+  <linearGradient id="core" x2="1" y2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#93c5fd" opacity=".12"/></pattern>
+  <clipPath id="clip"><rect width="600" height="300" rx="20"/></clipPath>
+</defs>
+<style>
+text{font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif}
+.hand{transform-box:fill-box;transform-origin:70% 75%;animation:wave 5s ease-in-out infinite}
+.packet{stroke-dasharray:10 190;animation:flow 4s linear infinite}
+.packet.second{animation-delay:-2s}.ring{transform-box:fill-box;transform-origin:center;animation:orbit 24s linear infinite}
+.spark{animation:glint 3s ease-in-out infinite}.cursor{animation:blink 1.2s steps(1) infinite}
+@keyframes wave{0%,35%,100%{transform:rotate(0)}5%,15%,25%{transform:rotate(16deg)}10%,20%,30%{transform:rotate(-10deg)}}
+@keyframes flow{to{stroke-dashoffset:-200}}@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes glint{50%{opacity:.45;transform:translateY(-3px)}}@keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.hand,.packet,.ring,.spark,.cursor{animation:none}.packet{stroke-dasharray:none;opacity:.5}}
+</style>
+<g clip-path="url(#clip)">
+<rect width="600" height="300" fill="url(#surface)"/>
+<rect x="430" width="170" height="300" fill="url(#dots)"/>
+<ellipse cx="550" cy="120" rx="190" ry="200" fill="url(#halo)"/>
+<path d="M0 298H600" stroke="url(#core)" stroke-width="4"/>
+<g class="hand"><text x="27" y="66" font-size="31" font-family="'Apple Color Emoji','Segoe UI Emoji',sans-serif">👋</text></g>
+<text x="76" y="62" fill="#82e7dc" font-size="23" font-weight="600">안녕하세요, 유소민입니다.</text>
+<text x="28" y="125" font-size="39" font-weight="750" fill="#f0f6fc">AI와 함께 아이디어를</text>
+<text x="28" y="179" font-size="39" font-weight="750" fill="#f0f6fc">서비스로 연결합니다.</text>
+<rect class="cursor" x="366" y="145" width="3" height="38" rx="1" fill="#2dd4bf"/>
+<text x="29" y="233" fill="#b0c5d9" font-size="18">데이터를 모으고, 화면과 기능을 연결하며</text>
+<text x="29" y="262" fill="#b0c5d9" font-size="18">AX 엔지니어를 향해 경험을 쌓아 갑니다.</text>
+
+<circle class="ring" cx="530" cy="57" r="29" fill="none" stroke="#38bdf8" stroke-opacity=".55" stroke-dasharray="6 8"/>
+<rect x="508" y="35" width="44" height="44" rx="13" fill="url(#core)"/>
+<text x="530" y="64" font-size="21" font-weight="800" fill="#08283b" text-anchor="middle">AI</text>
+</g>
+</svg>
