@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="32" viewBox="0 0 112 32" role="img" aria-label="LangGraph">
+<title>LangGraph</title>
+<style>:root{--bg:#f6f9fc;--border:#d7e3ee;--ink:#21364d;--accent:#087f8c;color-scheme:light dark}@media(prefers-color-scheme:dark){:root{--bg:#152638;--border:#2c465f;--ink:#e4effa;--accent:#5eead4}}</style>
+<rect x=".5" y=".5" width="111" height="31" rx="7" fill="var(--bg)" stroke="var(--border)"/>
+<g transform="translate(10 8) scale(.667)" fill="var(--accent)"><path d="M5 19H10A5 5 0 115 14ZM19 14A5 5 0 1114 19H19ZM10 5A5 5 0 105 10V5ZM19 5V10A5 5 0 1014 5Z"/></g>
+<text x="35" y="21" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">LangGraph</text>
+</svg>

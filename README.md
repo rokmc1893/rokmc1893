@@ -19,6 +19,33 @@
 - 🔎 계약서 분석·정책 검토처럼 자료를 읽고 판단을 돕는 서비스에 관심이 있다.
 - 🌱 AI를 실제 업무에 적용하는 **AX 엔지니어**를 목표로 한다.
 
+## 🛠️ Tech & Tools
+
+AI 도구와 함께 프로젝트에서 활용한 기술과 개발 도구를 정리했다.
+
+<table>
+<tr>
+<td width="130"><b>Languages</b></td>
+<td><img src="./assets/tech/javascript.svg" alt="JavaScript" height="32"> <img src="./assets/tech/typescript.svg" alt="TypeScript" height="32"> <img src="./assets/tech/python.svg" alt="Python" height="32"></td>
+</tr>
+<tr>
+<td width="130"><b>Frontend</b></td>
+<td><img src="./assets/tech/react.svg" alt="React" height="32"> <img src="./assets/tech/nextjs.svg" alt="Next.js" height="32"> <img src="./assets/tech/react-native.svg" alt="React Native" height="32"> <img src="./assets/tech/tailwindcss.svg" alt="Tailwind CSS" height="32"></td>
+</tr>
+<tr>
+<td width="130"><b>Backend &amp; Database</b></td>
+<td><img src="./assets/tech/fastapi.svg" alt="FastAPI" height="32"> <img src="./assets/tech/supabase.svg" alt="Supabase" height="32"></td>
+</tr>
+<tr>
+<td width="130"><b>AI &amp; LLM</b></td>
+<td><img src="./assets/tech/openai-api.svg" alt="OpenAI API" height="32"> <img src="./assets/tech/gemini-api.svg" alt="Gemini API" height="32"> <img src="./assets/tech/langgraph.svg" alt="LangGraph" height="32"></td>
+</tr>
+<tr>
+<td width="130"><b>Tools</b></td>
+<td><img src="./assets/tech/git.svg" alt="Git" height="32"> <img src="./assets/tech/github.svg" alt="GitHub" height="32"> <img src="./assets/tech/docker.svg" alt="Docker" height="32"> <img src="./assets/tech/codex.svg" alt="Codex" height="32"></td>
+</tr>
+</table>
+
 ## 🏆 수상
 
 | 시기 | 대회 | 수상 |

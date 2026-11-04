@@ -4,10 +4,11 @@
 
 ## 구성
 
-- `README.md`: 인사·소개·수상·프로젝트 카드·기여 기록을 표시한다.
+- `README.md`: 인사·소개·Tech & Tools·수상·프로젝트 카드·기여 기록을 표시한다.
 - `assets/profile-header.svg`: 손 인사와 AI 데이터 흐름을 표현한 모션 헤더다.
 - `assets/profile-header-mobile.svg`: 작은 화면용 모션 헤더다.
 - `assets/contact-*.svg`: 이메일·포트폴리오·GitHub 연락처 배지다.
+- `assets/tech/*.svg`: 프로젝트에서 활용한 기술과 도구 16개의 정적 배지다. 밝은·어두운 테마를 지원한다.
 - `index.html`: 자세한 프로젝트 설명을 제공하는 기존 포트폴리오 웹페이지다.
 - `profile/snake*.svg`: 실제 GitHub 기여 기록으로 만든 잔디 애니메이션이다.
 - `profile/stats*.svg`, `profile/top-langs*.svg`: 테마별 공개 활동·언어 카드다.
@@ -41,3 +42,9 @@ gh workflow run profile.yml --repo rokmc1893/rokmc1893 --ref main
 - [GitHub Profile 3D Contrib](https://github.com/yoshi389111/github-profile-3d-contrib): 3D 잔디다.
 - [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats): 통계 카드 형식이다.
 - [GitHub Stats Extended](https://github.com/stats-organization/github-stats-extended): 공개 통계 카드 제공 API다.
+
+## 기술 배지
+
+기술은 소개 아래에 Languages, Frontend, Backend & Database, AI & LLM, Tools의 5개 항목으로 표시한다. 독립 구현 능력이나 숙련도 등급을 뜻하지 않는다. 기술 목록을 수정하면 README의 분류·이미지·대체 텍스트를 함께 확인한다.
+
+브랜드 아이콘은 [Simple Icons](https://github.com/simple-icons/simple-icons)의 CC0 SVG 경로를 사용한다. React Native는 React 아이콘을 공유하며, OpenAI API와 Codex에는 직접 작성한 범용 API 연결·터미널 아이콘을 사용한다. 배지는 저장소에서 직접 제공하므로 프로필을 볼 때 외부 배지 서비스에 의존하지 않는다.
