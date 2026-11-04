@@ -4,7 +4,7 @@
 </div>
 
 <div align="center">
-  <img src="./assets/intro.svg?v=racing-theme-2" alt="AI와 데이터를 연결해, 더 나은 서비스와 업무 흐름을 만듭니다." width="100%">
+  <img src="./assets/intro.svg?v=ax-intro-1" alt="AI와 함께 서비스를 만들며, AX 엔지니어로 성장하고 있습니다." width="100%">
 </div>
 
 <div align="center">
@@ -12,6 +12,13 @@
 <a href="https://github.com/rokmc1893?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/GITHUB-171C26?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
 
 </div>
+
+## 소개
+
+AI 도구를 활용해 계약서 분석, 정책 검토, 웹·모바일 서비스 프로젝트에 참여해 왔습니다.
+업무의 불편을 이해하고 AI를 실제 서비스로 연결하는 **AX 엔지니어**를 목표로 합니다.
+
+**관심 분야** · 문서 분석 · 업무 자동화 · AI 서비스 개발
 
 ## 🛠️ Tech Stack
 
