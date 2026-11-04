@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="248" viewBox="0 0 1200 248" role="img" aria-labelledby="title desc">
+<title id="title">유소민 · 웹·모바일 서비스와 AI 활용 프로젝트</title>
+<desc id="desc">AI와 함께 웹·모바일 서비스를 만들며, 사용자의 불편을 해결하는 경험을 쌓아 가는 개발자입니다. 문서·AI·서비스를 연결한 흐름을 표현했습니다.</desc>
+<style>
+:root {color-scheme:light dark;--bg:#f1f6fc;--ink:#162c46;--muted:#52667d;--blue:#0969da;--line:#c8d9ec;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#142133;--ink:#edf3fa;--muted:#a6b9cf;--blue:#79b8ff;--line:#344f6e;--card:#1b2d43}}
+text{font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif}
+</style>
+<rect width="1200" height="248" rx="16" fill="var(--bg)"/>
+<text x="42" y="44" font-size="24" font-weight="700" fill="var(--ink)">유소민</text>
+<text x="42" y="97" font-size="30" font-weight="700" fill="var(--ink)">AI와 함께 웹·모바일 서비스를 만들며,</text>
+<text x="42" y="141" font-size="30" font-weight="700" fill="var(--ink)">사용자의 불편을 해결하는 경험을</text>
+<text x="42" y="185" font-size="30" font-weight="700" fill="var(--ink)">쌓아 가는 개발자입니다.</text>
+<path d="M1020 67v114" stroke="var(--line)" stroke-width="2"/>
+<g fill="var(--card)" stroke="var(--line)"><rect x="968" y="30" width="104" height="48" rx="10"/><rect x="968" y="100" width="104" height="48" rx="10"/><rect x="968" y="170" width="104" height="48" rx="10"/></g>
+<g text-anchor="middle" font-size="18" fill="var(--muted)"><text x="1020" y="61">문서</text><text x="1020" y="131">AI</text><text x="1020" y="201">서비스</text></g>
+</svg>

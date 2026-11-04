@@ -1,152 +1,105 @@
-<div align="center">
-  <a href="https://rokmc1893.github.io/rokmc1893/"><img src="./assets/f1-racing.svg" alt="소민의 Engineering Garage — F1 레이싱 배너" width="100%"></a>
-  <p><a href="https://rokmc1893.github.io/rokmc1893/">▶ 전체 화면에서 F1 주행 애니메이션 보기</a></p>
-</div>
+<img src="./assets/profile-header.svg" alt="유소민 · AI와 함께 웹·모바일 서비스를 만들며, 사용자의 불편을 해결하는 경험을 쌓아 가는 개발자입니다." width="100%">
 
-<div align="center">
-  <img src="./assets/intro.svg?v=ax-intro-1" alt="AI와 함께 서비스를 만들며, AX 엔지니어로 성장하고 있습니다." width="100%">
-</div>
+AI 도구를 활용해 **계약서 분석·정책 검토·웹·모바일 서비스** 프로젝트에 참여해 왔다.<br>
+업무의 불편을 이해하고 AI를 실제 서비스로 연결하는 **AX 엔지니어**를 목표로 한다.
 
-<div align="center">
-<a href="mailto:smin0108@gmail.com" title="smin0108@gmail.com"><img alt="Email — smin0108@gmail.com" src="./assets/email.svg" height="28"></a>
-<a href="https://github.com/rokmc1893?tab=repositories"><img alt="GitHub repositories" src="https://img.shields.io/badge/GITHUB-171C26?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
+[이메일](mailto:smin0108@gmail.com) &nbsp; / &nbsp; [포트폴리오 웹페이지](https://rokmc1893.github.io/rokmc1893/)
 
-</div>
+## 수상
 
-## 소개
+| 시기 | 대회 | 수상 |
+| :--- | :--- | :--- |
+| 2026.10 | 2026 SUMTECH Hackathon | **특별상**<br>한국디지털콘텐츠학회장상 |
+| 2026.08 | 인천대·울산대 초광역 지역문제 해결형 해커톤 | **장려상** |
+| 2025.12 | AI 및 빅데이터를 활용한 산업특화 아이디어 공모전 | **장려상** |
 
-AI 도구를 활용해 계약서 분석, 정책 검토, 웹·모바일 서비스 프로젝트에 참여해 왔습니다.
-업무의 불편을 이해하고 AI를 실제 서비스로 연결하는 **AX 엔지니어**를 목표로 합니다.
+## 대표 프로젝트
 
-**관심 분야** · 문서 분석 · 업무 자동화 · AI 서비스 개발
+프로젝트는 AI 도구를 활용해 개발했으며, 아래 기술은 프로젝트에 사용된 기술을 뜻한다.
 
-## 🛠️ Tech Stack
+### [Deepgle Legal](https://github.com/ulsanung-del/legal-screening-assistant)
 
-<table>
-<tr><td width="150"><b>Web & Mobile</b></td><td><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"> <img alt="React Native" src="https://img.shields.io/badge/React%20Native-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="Expo" src="https://img.shields.io/badge/Expo-171C26?style=flat-square&amp;logo=expo&amp;logoColor=E8EDF5"> <img alt="Vite" src="https://img.shields.io/badge/Vite-171C26?style=flat-square&amp;logo=vite&amp;logoColor=FF3535"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-171C26?style=flat-square&amp;logo=tailwindcss&amp;logoColor=61DAFB"></td></tr>
-<tr><td width="150"><b>UI & Visualization</b></td><td><img alt="React Query" src="https://img.shields.io/badge/React%20Query-171C26?style=flat-square&amp;logo=tanstack&amp;logoColor=FF3535"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTQgMjBWMTJtOCA4VjRtOCAxNlY4IiBzdHJva2U9IiM2MURBRkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Three.js" src="https://img.shields.io/badge/Three.js-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=E8EDF5"> <img alt="React Three Fiber" src="https://img.shields.io/badge/React%20Three%20Fiber-171C26?style=flat-square&amp;logo=threedotjs&amp;logoColor=61DAFB"></td></tr>
-<tr><td width="150"><b>Backend & Data</b></td><td><img alt="Python" src="https://img.shields.io/badge/Python-171C26?style=flat-square&amp;logo=python&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="NestJS" src="https://img.shields.io/badge/NestJS-171C26?style=flat-square&amp;logo=nestjs&amp;logoColor=FF3535"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-171C26?style=flat-square&amp;logo=postgresql&amp;logoColor=E8EDF5"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"> <img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-171C26?style=flat-square&amp;logo=neo4j&amp;logoColor=4AE0A4"> <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-171C26?style=flat-square&amp;logo=streamlit&amp;logoColor=FF3535"> <img alt="Redis" src="https://img.shields.io/badge/Redis-171C26?style=flat-square&amp;logo=redis&amp;logoColor=FF3535"> <img alt="Pandas" src="https://img.shields.io/badge/Pandas-171C26?style=flat-square&amp;logo=pandas&amp;logoColor=E8EDF5"></td></tr>
-<tr><td width="150"><b>AI & Agents</b></td><td><img alt="Claude" src="https://img.shields.io/badge/Claude-171C26?style=flat-square&amp;logo=claude&amp;logoColor=D9A181"> <img alt="Codex" src="https://img.shields.io/badge/Codex-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0ibTggNi01IDYgNSA2bTgtMTIgNSA2LTUgNk0xNCA0bC00IDE2IiBmaWxsPSJub25lIiBzdHJva2U9IiNFOEVERjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-171C26?style=flat-square&amp;logo=googlegemini&amp;logoColor=E8EDF5"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"> <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-171C26?style=flat-square&amp;logo=langchain&amp;logoColor=4AE0A4"> <img alt="Chroma" src="https://img.shields.io/badge/Chroma-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iIzRBRTBBNCI%2BPGNpcmNsZSBjeD0iNiIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjE4IiByPSI0Ii8%2BPC9nPjwvc3ZnPg%3D%3D"> <img alt="RAG" src="https://img.shields.io/badge/RAG-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNEFFMEE0IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJtMTQgMTQgNyA3IiBzdHJva2U9IiM0QUUwQTQiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg%3D%3D"></td></tr>
-<tr><td width="150"><b>Tools & Integration</b></td><td><img alt="Git" src="https://img.shields.io/badge/Git-171C26?style=flat-square&amp;logo=git&amp;logoColor=FF3535"> <img alt="Docker" src="https://img.shields.io/badge/Docker-171C26?style=flat-square&amp;logo=docker&amp;logoColor=E8EDF5"> <img alt="Kakao SDK" src="https://img.shields.io/badge/Kakao%20SDK-171C26?style=flat-square&amp;logo=kakao&amp;logoColor=FEE500"></td></tr>
-</table>
+계약서의 위험 조항과 근거 법령을 함께 확인하는 AI 분석 서비스다.
 
-## 🏎️ 프로젝트 및 대회 참가
+**담당 경험** · 백엔드 개발 및 프론트엔드 연동
 
-<table>
-<tr>
-<td colspan="2" valign="top">
-<h3><a href="https://github.com/rokmc1893/INU-X-UOU">정책핏 인천 ↗</a> · 🏆 장려상</h3>
-<p><b>대회</b> · <a href="https://rnd.incheon.ac.kr/linc/online/edu_view.do?edu_pbanc_sn=60">초광역 지역문제 해결형 해커톤</a><br><b>주최</b> · 인천대학교 × 울산대학교<br><b>팀</b> · F4</p>
-<p><b>개발 내용</b><br><b>산업 수요와 정책을 비교하는 정책 분석 앱.</b><br>지원 공백·중복 후보를 찾고 검토서 초안 생성.</p>
-<p><b>담당 역할 · 데이터 조사 · 검증 설계</b></p>
-<ul>
-<li>정책 90건의 담당부서·예산 대조 자료 정리</li>
-<li>검증용 정답셋 22건과 MVP 평가 기준 구성</li>
-</ul>
-<p><img alt="Python" src="https://img.shields.io/badge/Python-171C26?style=flat-square&amp;logo=python&amp;logoColor=E8EDF5"> <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-171C26?style=flat-square&amp;logo=streamlit&amp;logoColor=FF3535"> <img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-171C26?style=flat-square&amp;logo=neo4j&amp;logoColor=4AE0A4"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"> <img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3>🧭 Ulsainer</h3>
-<p><b>대회</b> · <a href="https://api.visitkorea.or.kr/">2026 관광데이터 활용 공모전</a><br><b>주최</b> · 한국관광공사</p>
-<p><b>개발 내용</b><br><b>관광지 탐색과 여행 기록을 위한 모바일 앱.</b><br>관광 미션·커뮤니티·방문 기록 기능 개발.</p>
-<p><b>담당 역할 · 모바일 프론트엔드 · API 연동</b></p>
-<ul>
-<li>커뮤니티·마이페이지 UI 및 게시글·댓글 기능 구현</li>
-<li>관광지 검색 API·카카오 로그인 연동</li>
-<li>미션 진행 상태 복구 · 현재 위치·방문 기록 지도 개선</li>
-</ul>
-<p><img alt="React Native" src="https://img.shields.io/badge/React%20Native-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="Expo" src="https://img.shields.io/badge/Expo-171C26?style=flat-square&amp;logo=expo&amp;logoColor=E8EDF5"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"> <img alt="Kakao SDK" src="https://img.shields.io/badge/Kakao%20SDK-171C26?style=flat-square&amp;logo=kakao&amp;logoColor=FEE500"></p>
-</td>
-<td width="50%" valign="top">
-<h3>⚖️ <a href="https://github.com/ulsanung-del/legal-screening-assistant">Deepgle Legal ↗</a></h3>
-<p><b>대회</b> · <a href="https://aisw.daegu.ac.kr/article/photo25/detail/222842">2026 Google AI Agent Challenge 예선</a><br><b>주최</b> · 경북대·대구대·영남대·울산대·한동대 SW중심대학</p>
-<p><b>개발 내용</b><br><b>계약서의 위험 조항을 확인하는 AI 분석 서비스.</b><br>위험 조항·근거 법령·검토 보고서를 한 화면에 표시.</p>
-<p><b>담당 역할 · 백엔드 · 프론트엔드 연동</b></p>
-<ul>
-<li>FastAPI 업로드·분석·결과 조회 API 구현</li>
-<li>LangGraph 분석 흐름 및 Chroma 검색 연동</li>
-<li>분석 결과 UI·API 연결 및 오류·대기 상태 처리</li>
-</ul>
-<p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-171C26?style=flat-square&amp;logo=googlegemini&amp;logoColor=E8EDF5"> <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-171C26?style=flat-square&amp;logo=langchain&amp;logoColor=4AE0A4"> <img alt="Chroma" src="https://img.shields.io/badge/Chroma-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iIzRBRTBBNCI%2BPGNpcmNsZSBjeD0iNiIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxOCIgY3k9IjciIHI9IjQiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjE4IiByPSI0Ii8%2BPC9nPjwvc3ZnPg%3D%3D"></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3>🤝 <a href="https://github.com/US-VIBE/us_vibe">US Vibe ↗</a></h3>
-<p><b>개발 내용</b><br><b>AI 팀원과 협업을 연습하는 학습 시뮬레이터.</b><br>역할 분담·채팅·산출물 리뷰·회고 기능 개발.</p>
-<p><b>담당 역할 · 워크스페이스 UI · 백엔드 구현</b></p>
-<ul>
-<li>워크스페이스 UI·인증·채팅 API 및 데이터 저장 구현</li>
-<li>채팅 이미지 업로드·서명 URL 연동</li>
-<li>OpenAI 비전 기반 산출물 평가 구현</li>
-</ul>
-<p><img alt="Next.js" src="https://img.shields.io/badge/Next.js-171C26?style=flat-square&amp;logo=nextdotjs&amp;logoColor=E8EDF5"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="NestJS" src="https://img.shields.io/badge/NestJS-171C26?style=flat-square&amp;logo=nestjs&amp;logoColor=FF3535"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-171C26?style=flat-square&amp;logo=postgresql&amp;logoColor=E8EDF5"> <img alt="Redis" src="https://img.shields.io/badge/Redis-171C26?style=flat-square&amp;logo=redis&amp;logoColor=FF3535"> <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTMgM2gxOHYxNEgxMGwtNyA1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThFREY1IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4%3D"></p>
-</td>
-<td width="50%" valign="top">
-<h3>🌱 <a href="https://github.com/rokmc1893/Capstone-Design">결혼·출산 준비 헬스케어 ↗</a></h3>
-<p><b>개발 내용</b><br><b>건강 지표와 검사 결과를 확인하는 모바일 웹.</b><br>건강 데이터 시각화·미션·커뮤니티 기능 개발.</p>
-<p><b>담당 역할 · 프론트엔드 · 인증/API 연동</b></p>
-<ul>
-<li>온보딩·검사 설문·결과 리포트·미션·커뮤니티 UI 구현</li>
-<li>이메일·카카오 로그인 및 백엔드 API 연동</li>
-<li>검사 진행 상태 복구 · 인증 만료·배포 경로 오류 수정</li>
-</ul>
-<p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="Vite" src="https://img.shields.io/badge/Vite-171C26?style=flat-square&amp;logo=vite&amp;logoColor=FF3535"> <img alt="Zustand" src="https://img.shields.io/badge/Zustand-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPGcgZmlsbD0iI0Q0QTVGRiI%2BPGNpcmNsZSBjeD0iNSIgY3k9IjEyIiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSI1IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTgiIGN5PSIxOSIgcj0iMyIvPjwvZz48cGF0aCBkPSJtNyAxMCA4LTRtLTggOCA4IDQiIHN0cm9rZT0iI0Q0QTVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-171C26?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0iTTQgMjBWMTJtOCA4VjRtOCAxNlY4IiBzdHJva2U9IiM2MURBRkIiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8%2BPC9zdmc%2B"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-171C26?style=flat-square&amp;logo=tailwindcss&amp;logoColor=61DAFB"></p>
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-<h3>🐾 배웅길 <sub>코드 비공개</sub></h3>
-<p><b>구분</b> · 개인 사이드 프로젝트<br><b>개발 인원</b> · 1인 개발</p>
-<p><b>개발 내용</b><br><b>반려동물 장례시설을 찾고 비용을 비교하는 모바일 웹.</b><br>시설 탐색·조건별 비용 비교·사진 추모영상 기능 개발.</p>
-<p><b>담당 역할 · 프론트엔드 · 백엔드 구현</b></p>
-<ul>
-<li>시설 탐색·비용 비교 UI 및 API 구현</li>
-<li>전국 시설 데이터 수집·정규화 및 조회 API 연동</li>
-<li>카카오 로그인·회원 관리 및 사진 추모영상 기능 구현</li>
-</ul>
-<p><img alt="React" src="https://img.shields.io/badge/React-171C26?style=flat-square&amp;logo=react&amp;logoColor=61DAFB"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-171C26?style=flat-square&amp;logo=typescript&amp;logoColor=E8EDF5"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-171C26?style=flat-square&amp;logo=fastapi&amp;logoColor=4AE0A4"> <img alt="Supabase" src="https://img.shields.io/badge/Supabase-171C26?style=flat-square&amp;logo=supabase&amp;logoColor=4AE0A4"></p>
-</td>
-</tr>
-</table>
+- 계약서 업로드·분석 요청·결과 조회 API 구현에 참여했다.
+- LangGraph 분석 흐름과 Chroma 검색을 연동하고, 결과 화면의 오류·대기 상태를 처리했다.
 
-## 🟩 Season Telemetry / 3D Contributions
+**프로젝트 사용 기술** · FastAPI · Gemini · LangGraph · Chroma · React<br>
+<sub>2026 Google AI Agent Challenge 참가</sub>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green.svg">
-    <img src="./profile-3d-contrib/profile-night-green.svg" alt="rokmc1893의 실제 GitHub 날짜별 기여 기록을 초록색 3D 막대로 표현한 그래프" width="100%">
-  </picture>
-  <p><sub>One contribution. One better lap. 매일 쌓아가는 개선의 기록.</sub></p>
-</div>
+### [정책핏 인천](https://github.com/rokmc1893/INU-X-UOU)
 
-<details>
-<summary><b>📊 Open Telemetry — 통계 · 사용 언어 · 저장소 카드</b></summary>
+산업 수요와 정책을 비교해 지원 공백·중복 후보를 찾고 검토서 초안을 만드는 앱이다.
 
-<br>
+**담당 경험** · 데이터 조사 및 검증 설계
 
-<div align="center">
-  <img src="./profile/stats.svg" alt="rokmc1893 GitHub 전체 통계" width="49%">
-  <img src="./profile/top-langs.svg" alt="공개 저장소의 사용 언어 분포" width="49%">
-</div>
+- 정책의 담당 부서·예산 대조 자료를 정리했다.
+- 검증용 정답셋과 MVP 평가 기준을 구성했다.
 
-<br>
+**프로젝트 사용 기술** · Python · Streamlit · Neo4j · OpenAI<br>
+<sub>인천대·울산대 초광역 지역문제 해결형 해커톤 장려상</sub>
 
-<div align="center">
-  <a href="https://github.com/rokmc1893/Capstone-Design"><img src="./profile/pin-healthcare.svg" alt="AI 맞춤형 헬스케어 저장소" width="49%"></a>
-  <a href="https://github.com/rokmc1893/Google_AI_Agent"><img src="./profile/pin-legal.svg" alt="Deepgle Legal 저장소" width="49%"></a>
-  <a href="https://github.com/rokmc1893/INU-X-UOU"><img src="./profile/pin-policy.svg" alt="정책핏 인천 저장소" width="49%"></a>
-</div>
+### 패스트거북이
 
-</details>
+노트북 작업 중 개인 기준 자세의 변화를 확인하고, 지속적인 이탈을 알려주는 웹 서비스다.
+
+**담당 경험** · 문제 정의 및 서비스 흐름 설계 참여
+
+- 기준 자세 등록부터 변화 확인·알림·기록·리포트로 이어지는 사용자 흐름을 구체화했다.
+- AI 에이전트를 활용해 기능 요구사항과 설계 문서를 정리하고 결과물을 검토·수정했다.
+
+<sub>2026 SUMTECH Hackathon 특별상(한국디지털콘텐츠학회장상)</sub>
+
+### [US Vibe](https://github.com/US-VIBE/us_vibe)
+
+AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 연습하는 학습 시뮬레이터다.
+
+**담당 경험** · 워크스페이스 UI 및 백엔드 개발
+
+- 워크스페이스 화면, 인증·채팅 API, 데이터 저장 구현에 참여했다.
+- 이미지 업로드·서명 URL을 연동하고 OpenAI 비전 기반 산출물 평가를 구현했다.
+
+**프로젝트 사용 기술** · Next.js · NestJS · PostgreSQL · OpenAI<br>
+<sub>팀 프로젝트</sub>
+
+### 배웅길
+
+반려동물 장례시설을 찾고 조건별 비용을 비교하는 모바일 웹 서비스다.
+
+**담당 경험** · 1인 사이드 프로젝트
+
+- AI 도구를 활용해 시설 탐색·비용 비교 화면과 API를 개발했다.
+- 시설 데이터 수집·정규화, 카카오 로그인·회원 관리, 사진 추모영상 기능을 연결했다.
+
+**프로젝트 사용 기술** · React · TypeScript · FastAPI · Supabase<br>
+<sub>개인 프로젝트 · 코드 비공개</sub>
+
+### [결혼·출산 준비 헬스케어](https://github.com/rokmc1893/Capstone-Design)
+
+건강 지표와 검사 결과를 리포트로 확인하고 미션·커뮤니티를 이용하는 모바일 웹이다.
+
+**담당 경험** · 프론트엔드 개발 및 인증·API 연동
+
+- 온보딩·검사 설문·결과 리포트·미션·커뮤니티 화면 구현에 참여했다.
+- 이메일·카카오 로그인과 API를 연동하고 진행 상태 복구·인증 만료 오류를 처리했다.
+
+**프로젝트 사용 기술** · React · TypeScript · Vite · Zustand<br>
+<sub>캡스톤 디자인</sub>
+
+### Ulsainer
+
+관광지를 탐색하고 미션·커뮤니티·방문 기록을 이용하는 모바일 앱이다.
+
+**담당 경험** · 모바일 프론트엔드 개발 및 API 연동
+
+- 커뮤니티·마이페이지와 게시글·댓글 기능 구현에 참여했다.
+- 관광지 검색·카카오 로그인을 연동하고 미션 상태 복구와 방문 기록 지도를 개선했다.
+
+**프로젝트 사용 기술** · React Native · Expo · TypeScript · Supabase<br>
+<sub>2026 관광데이터 활용 공모전 참가</sub>
 
 ---
 
-<div align="center">
-  <p><b>Build with purpose. Tune with precision. Ship as a team.</b></p>
-  <img src="https://komarev.com/ghpvc/?username=rokmc1893&amp;label=PADDOCK+VISITS&amp;color=ff3535&amp;style=for-the-badge" alt="프로필 조회 카운터">
-  <p><sub>See you on the next lap. 🏁</sub></p>
-</div>
+<sub>2026년 11월 기준 · 담당 경험을 중심으로 정리했다.</sub>
