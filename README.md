@@ -4,7 +4,7 @@
     <img src="./assets/profile-header.svg?v=ax-overview-2" alt="👋 안녕하세요, 유소민입니다. AI와 함께 아이디어를 서비스로 연결합니다." width="100%">
   </picture>
   <br><br>
-  <a href="mailto:smin0108@gmail.com"><img src="./assets/contact-email.svg" alt="이메일" height="36"></a>
+  <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=smin0108%40gmail.com" title="smin0108@gmail.com · Gmail로 메일 쓰기"><img src="./assets/contact-email.svg?v=gmail-1" alt="smin0108@gmail.com · Gmail로 메일 쓰기" height="36"></a>
   &nbsp;
   <a href="https://rokmc1893.github.io/rokmc1893/"><img src="./assets/contact-portfolio.svg" alt="포트폴리오 웹페이지" height="36"></a>
   &nbsp;
