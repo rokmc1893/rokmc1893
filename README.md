@@ -207,15 +207,15 @@ AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 연습하는 학
 
 ### 오토일지(AutoDiary)
 
-외근 차량의 출발·방문·음성 메모·마감을 연결하는 Android 앱 프로토타입이다.
+현대자동차그룹 차량용 앱 개발 공모전을 위해 외근 차량의 출발·방문·음성 메모·마감을 연결하도록 개발한 Android 프로토타입이다.
 
 **담당 경험** · 제품 흐름 설계, AI 보조 개발·통합 검증, 시연 산출물 정리
 
 - 차량 신호 기반 7단계와 SIM 시연 범위를 정하고 Compose 화면·상태기계·Room 저장·복구를 연결했다.
-- 테스트·APK 빌드·서명과 시연 문서를 정리하고, 실제 차량 SDK·내비·음성 검증의 남은 범위를 구분했다.
+- 테스트 59건·SIM 빌드·APK 서명을 검증하고, 실제 차량 SDK·내비·음성 인식의 미검증 범위를 구분했다.
 
 **프로젝트 사용 기술** · Kotlin · Jetpack Compose · Room · Android TTS/STT<br>
-<sub>Pleos 앱 개발 공모전 접수용 프로토타입 · 코드 비공개 · 실제 차량 미연동</sub>
+<sub><a href="https://appdevchallenge.auto-hmg.io/guide/submission#resubmit">현대자동차그룹 차량용 앱 개발 공모전</a> 참가 · 미입상 · 코드 비공개 · 차량 신호는 SIM 검증</sub>
 
 </details>
 
