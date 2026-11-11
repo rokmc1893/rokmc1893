@@ -56,7 +56,7 @@ AI 도구와 함께 프로젝트에서 활용한 기술과 개발 도구를 정�
 
 ## 🧩 만들고 연결한 프로젝트
 
-AI 도구와 함께 개발한 프로젝트다. 각 카드에는 본인이 담당한 경험을 정리했다. [프로젝트별 역할·기여 전체 보기](docs/CONTRIBUTIONS.md)에서 산출물과 공동 작업 범위를 확인할 수 있다.
+AI 도구와 함께 개발한 프로젝트다. 각 카드에는 본인이 담당한 경험을 정리했다. [프로젝트별 주요 작업](docs/CONTRIBUTIONS.md)에서 관련 코드와 개발 내용을 확인할 수 있다.
 
 <table>
 <tr>
@@ -215,11 +215,10 @@ AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 연습하는 학
 - 테스트 59건·SIM 빌드·APK 서명을 검증하고, 실제 차량 SDK·내비·음성 인식의 미검증 범위를 구분했다.
 
 **프로젝트 사용 기술** · Kotlin · Jetpack Compose · Room · Android TTS/STT<br>
-<sub><a href="https://appdevchallenge.auto-hmg.io/guide/submission#resubmit">현대자동차그룹 차량용 앱 개발 공모전</a> 참가 · 미입상 · 코드 비공개 · 차량 신호는 SIM 검증</sub>
+<sub><a href="https://appdevchallenge.auto-hmg.io/guide/submission#resubmit">현대자동차그룹 차량용 앱 개발 공모전</a> 참가 · 코드 비공개 · 차량 신호는 SIM 검증</sub>
 
 </details>
 
-비공개 프로젝트는 이 프로필의 설명만 공개하며, 상세 문서·소스 열람에는 접근 권한이 필요하다.
 
 ## 🌱 매일 쌓아 가는 기록
 
@@ -250,7 +249,7 @@ AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 연습하는 학
   <img src="./profile/top-langs.svg" alt="공개 저장소의 언어 구성" width="49%">
 </picture>
 
-<sub>공개 저장소를 집계한 참고 통계다. 언어 비중은 코드 구성이며 숙련도를 뜻하지 않는다.</sub>
+<sub>공개 저장소의 활동과 사용 언어를 집계한 통계다.</sub>
 
 ---
 
