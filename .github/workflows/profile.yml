@@ -9,6 +9,8 @@ on:
     paths:
       - ".github/workflows/profile.yml"
       - "scripts/update-cards.py"
+      - "scripts/update-activity.py"
+      - "scripts/test_activity.py"
 
 permissions:
   contents: write
@@ -47,6 +49,16 @@ jobs:
           PROFILE_OWNER: ${{ github.repository_owner }}
         run: python3 scripts/update-cards.py
 
+      - name: 시간대 집계와 실패 시 보존 검증
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+
+      - name: 공개 커밋의 시간대별 활동 카드 갱신
+        continue-on-error: true # API 장애 시 이전 정상 카드를 보존한다.
+        env:
+          PROFILE_OWNER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update-activity.py
+
       - name: 생성 이미지 검증
         run: |
           python3 - <<'PY'
@@ -56,6 +68,8 @@ jobs:
               'profile/snake.svg', 'profile/snake-dark.svg',
               'profile/stats.svg', 'profile/stats-dark.svg',
               'profile/top-langs.svg', 'profile/top-langs-dark.svg',
+              'profile/activity.svg', 'profile/activity-dark.svg',
+              'profile/activity-mobile.svg', 'profile/activity-mobile-dark.svg',
               'profile-3d-contrib/profile-green.svg',
               'profile-3d-contrib/profile-night-green.svg',
           ]
@@ -72,7 +86,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/snake*.svg profile/stats*.svg profile/top-langs*.svg profile-3d-contrib/profile-green.svg profile-3d-contrib/profile-night-green.svg
+          git add profile/activity*.svg profile/snake*.svg profile/stats*.svg profile/top-langs*.svg profile-3d-contrib/profile-green.svg profile-3d-contrib/profile-night-green.svg
           if git diff --cached --quiet; then
             echo "기여 이미지가 최신 상태다."
             exit 0
