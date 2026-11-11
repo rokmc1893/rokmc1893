@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">공개 활동, Rank: C</title>
-        <desc id="descId">받은 스타 수: 0, 전체 커밋 수  (작년) : 63, PR 횟수: 2, 이슈 개수: 0, (작년) 기여: 2</desc>
+        <desc id="descId">받은 스타 수: 0, 전체 커밋 수  (작년) : 80, PR 횟수: 3, 이슈 개수: 0, (작년) 기여: 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 236.91197442900068;
+        stroke-dashoffset: 234.45114992914506;
       }
     }
   
@@ -173,7 +173,7 @@
         x="174.01"
         y="12.5"
         data-testid="commits"
-      >63</text>
+      >80</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -188,7 +188,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs"
-      >2</text>
+      >3</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
