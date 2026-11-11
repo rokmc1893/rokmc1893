@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="./assets/profile-header-mobile.svg?v=ax-overview-2">
-    <img src="./assets/profile-header.svg?v=ax-overview-2" alt="👋 안녕하세요, 유소민입니다. AI와 함께 아이디어를 서비스로 연결합니다." width="100%">
+    <source media="(max-width: 600px)" srcset="./assets/profile-header-mobile.svg?v=project-overview-3">
+    <img src="./assets/profile-header.svg?v=project-overview-3" alt="👋 안녕하세요! AI와 함께 아이디어를 서비스로 연결합니다." width="100%">
   </picture>
   <br><br>
   <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=smin0108%40gmail.com" title="smin0108@gmail.com · Gmail로 메일 쓰기"><img src="./assets/contact-email.svg?v=gmail-1" alt="smin0108@gmail.com · Gmail로 메일 쓰기" height="36"></a>
@@ -198,7 +198,7 @@ AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 연습하는 학
 
 **담당 경험** · 워크플로우 공동 설계·개선, 테스트·오류 분석, 웹앱 연동·배포
 
-- 고영빈과 워크플로우·테스트셋을 공동 담당하고, 경로별 판정·수량 차이·후보 오류 처리 수정안을 정리했다.
+- 워크플로우·테스트셋을 공동 담당하고, 경로별 판정·수량 차이·후보 오류 처리 수정안을 정리했다.
 - Studio 결과 조회·보고서·PDF와 Netlify 데모를 연결하고 제출자료·검증 문서를 정리했다.
 - 20세트 기대값 기반 검증과 실제 실행 결과를 구분해 기록했다.
 
