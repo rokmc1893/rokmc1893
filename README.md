@@ -241,6 +241,15 @@ AI 팀원과 역할 분담·채팅·산출물 리뷰·회고를 연습하는 학
 <br>
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./profile/activity-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="./profile/activity-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/activity-dark.svg">
+  <img src="./profile/activity.svg" alt="나의 개발 리듬 · 최근 90일 공개 커밋의 시간대별 비중, 한국 시간 기준" width="100%">
+</picture>
+
+<br><br>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg">
   <img src="./profile/stats.svg" alt="공개 저장소 활동 통계" width="49%">
 </picture>
