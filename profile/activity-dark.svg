@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="314" viewBox="0 0 1000 314" role="img" aria-labelledby="title desc">
 <title id="title">나의 개발 리듬</title>
-<desc id="desc">최근 90일 공개 커밋 · 41건. 2026.08.15–11.13. Asia/Seoul 기준 커밋 작성 시각. 아침 6건, 낮 26건, 저녁 9건, 새벽 0건</desc>
+<desc id="desc">최근 90일 공개 커밋 · 41건. 2026.08.16–11.14. Asia/Seoul 기준 커밋 작성 시각. 아침 6건, 낮 26건, 저녁 9건, 새벽 0건</desc>
 <style>text{font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif}.num{font-variant-numeric:tabular-nums}</style>
 <rect x=".5" y=".5" width="999" height="313" rx="18" fill="#101c2d" stroke="#2b4056"/>
 <path d="M25 32h4m5 0h4m5 0h4" stroke="#82e7dc" stroke-width="4" stroke-linecap="round"/>
@@ -62,5 +62,5 @@
 <rect x="938" y="239.36" width="5" height="10.64" rx="2" fill="#82e7dc" opacity="1"/>
 <rect x="947" y="247.00" width="5" height="3.00" rx="2" fill="#82e7dc" opacity="0.18"/>
 <text x="26" y="244" fill="#9ab2c9" font-size="14">최근 90일 공개 커밋 · 41건</text>
-<text x="26" y="280" fill="#9ab2c9" font-size="14">한국 시간 · 커밋 작성 시각 기준    2026.08.15–11.13</text>
+<text x="26" y="280" fill="#9ab2c9" font-size="14">한국 시간 · 커밋 작성 시각 기준    2026.08.16–11.14</text>
 </svg>
