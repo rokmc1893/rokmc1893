@@ -5,7 +5,6 @@
 | 프로젝트 | 담당 역할 | 상세 작업 |
 |---|---|---|
 | 오더십 | 워크플로우 공동 설계·개선, 테스트·오류 분석, 보고서 웹앱·배포와 제출자료 정리 | [상세](https://github.com/rokmc1893/ordership/blob/main/docs/CONTRIBUTIONS.md) |
-| 오토일지 | 제품 흐름·SIM 범위 결정, Android 프로토타입 개발·통합 검증과 시연 산출물 정리 | [상세](https://github.com/rokmc1893/pleos-autodiary/blob/codex/prototype/docs/CONTRIBUTIONS.md) |
 | Deepgle Legal | 데이터 수집·정리, 분석 API·프론트엔드·백엔드 개발과 팀원 변경 통합 | [상세](https://github.com/rokmc1893/Google_AI_Agent/blob/main/docs/CONTRIBUTIONS.md) |
 | 결혼·출산 준비 헬스케어 | 프론트엔드, 이메일·카카오 인증·API 연동과 검사 복구·배포 경로 개선 | [상세](https://github.com/rokmc1893/Capstone-Design/blob/main/docs/CONTRIBUTIONS.md) |
 | 패스트거북이 | 팀 프론트엔드·측정 데이터 연동·근거 조사, 개인 후속 카메라·연결 개선 | [상세](https://github.com/rokmc1893/fast-turtle/blob/main/docs/CONTRIBUTIONS.md) |
